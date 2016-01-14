@@ -1,0 +1,350 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Jan 11, 2016, 2:17:24 PM
+    Author     : fantom
+*/
+body{
+    font-family:"HelveticaNeueLTW20-Roma";
+    font-size: .8em
+}
+
+a{text-decoration: none;font-size: .8em}
+img{border: none;}
+
+.Clear{clear: both}
+.Left{float: left}
+.Right{float: right}
+
+h1,h2,h3,h4,h5{font-family:"HelveticaNeueLTW20-bold";}
+h1{font-size: 1.8em;color: #333;}
+h2{font-size: 1.6em;color: #167ab6;}
+h3{font-size: 1.4em;color: #89929b;}
+h4{font-size: 0.2em;color: #000;}
+
+.bg-Arabic,.bg-International,.bg-UAE{background-color: #167ab6;color: #FFF;}
+.bg-Article,bg-Directions{background-color: #6e7e48;color: #FFF;}
+.bg-Technology{background-color: #cccf51;color: #FFF;}
+.bg-Health{background-color: #2294db;color: #FFF;}
+.bg-Sport{background-color: #009451;color: #FFF;}
+.bg-LifeStyle{background-color: #9f2f78;color: #FFF;}
+.bg-Varitiess{background-color: #5f3fa3;color: #FFF;}
+.bg-Bsiness{background-color: #d36f22;color: #FFF;}
+.bg-Culture{background-color: #8f8059;color: #FFF;}
+.bg-Youth{background-color: #da035d;color: #FFF;}
+.bg-Pictures{background-color: #333333;color: #FFF;}
+.bg-Comics{background-color: #666666;color: #FFF;}
+.bg-Survy{background-color: #666666;color: #FFF;}
+
+
+.MainMenu
+{
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+.MainMenu li
+{
+    padding: 0;
+    margin: 0;
+    display: block;
+    border-bottom: .1em solid #ddd;
+}
+.MainMenu li:hover
+{
+    background-color: #e7e7e7;
+}
+.MainMenu li a
+{
+    display: block;
+    padding: .8em .4em;
+    margin: 0;
+    color: #333;
+    font-size: 1.0em;
+}
+.MainMenu li:nth-child(1) a{color: #167ab6;}
+.MainMenu li:nth-child(2) a{color: #167ab6;}
+.MainMenu li:nth-child(3) a{color: #167ab6;}
+.MainMenu li:nth-child(4) a{color: #6e7e48;}
+
+.MainMenu li:nth-child(5) a{color: #cccf51;}
+.MainMenu li:nth-child(6) a{color: #2294db;}
+.MainMenu li:nth-child(7) a{color: #009451;}
+
+.MainMenu li:nth-child(8) a{color: #9f2f78;}
+.MainMenu li:nth-child(9) a{color: #5f3fa3;}
+
+.MainMenu li:nth-child(10) a{color: #d36f22;}
+.MainMenu li:nth-child(11) a{color: #da035d;}
+.MainMenu li:nth-child(12) a{color: #333;}
+
+.MainMenuTabs
+{
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+.MainMenuTabs li
+{
+    text-align: center;
+    padding: .7em 0;
+    margin: 0;
+    display: inline-block;
+    width: 33.33%;
+    background-color: #8a939c;
+    float: left;
+    
+}
+.MainMenuTabs li.ActiveTab
+{
+    background-color: #bababa;
+    
+}
+.MainMenuTabs li a
+{
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+    width: 2.3em;
+    height: 2.3em;
+}
+.MainMenuTabs li a.NewsLink
+{
+    background-image: url( Images/Icon/news.png);
+    background-position: center;
+    background-size: 100%;
+    background-repeat: repeat-x;
+}
+.MainMenuTabs li a.VideoLink
+{
+    background-image: url( Images/Icon/video.png);
+    background-position: center;
+    background-size: 97%;
+    background-repeat: no-repeat;
+}
+.MainMenuTabs li a.AboutLink
+{
+    background-image: url( Images/Icon/info.png);
+    background-position: center;
+    background-size: 97%;
+    background-repeat: no-repeat;
+}
+
+
+.MainNewsImgWrapper
+{
+    position: relative;
+}
+.MainNewsImgWrapper img
+{
+    z-index: 1;
+    display: block;
+}
+.MainNewsImgWrapper .TitleWrapper
+{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+    width: 100%;
+    min-height: 2em;
+    background-color: rgba(00,00,00,0.4);
+}
+.TitleWrapper-Title
+{
+    display: block;
+    min-height: 2em;
+    font-weight: 500;
+    color: #FFF;
+    font-size: 0.9em;
+    z-index: 3;
+
+    margin: 0;
+    padding: .3em;
+}
+
+
+
+
+.img_small{
+    width: 100%;
+    border: 0 #000 solid;
+}
+.No-Item
+{
+    padding: 0;
+    border: 0 solid #ddd;
+}
+.Block-Margin-Bottom1
+{
+    margin: 0 0;
+    padding: 0 0;
+    clear: both;
+    height: .5em;
+}
+
+.Title-Two
+{
+    display: block;
+    min-height: 30px;
+    font-weight: 500;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: #444;
+    font-size: .9em;
+    vertical-align: baseline;
+
+    position: relative;
+    z-index: 2;
+
+    margin: 0;
+    padding: .3em;
+
+    background-color: #f5f5f5;
+    border: 0 solid #ddd;
+}
+
+.Title-Three
+{
+    display: block;
+    min-height: 30px;
+    font-weight: 500;
+    overflow: hidden;
+    white-space: normal;
+    line-height: 1.6em;
+    color: #167ab6;
+    font-size: .8em;
+    vertical-align: baseline;
+
+    position: relative;
+    z-index: 2;
+
+    margin: 0;
+    padding:  .3em;
+
+    background-color: none;
+    border: 0 solid #ddd;
+}
+
+.txt-Description
+{
+    font-size: .8em;
+    white-space: normal;
+    line-height: 1.6em;
+    padding: 0;
+    margin: 0;
+}
+.txt-Source
+{
+    font-size: .7em;
+    line-height: normal;
+    padding: .3em;
+    margin: 0;
+}
+
+
+.MenuButton{
+    background: none;
+    border: 0;
+    margin: .2em 0 0 0;
+    padding: 1em 0 0 0;
+    width: 1.8em;
+    color: #167ab8;
+    /*background-image: url( Images/Icon/menu.png);
+    background-position: center right;
+    background-size: 100%;
+    background-repeat: repeat-x;*/
+}
+.MenuButton i{
+    
+}
+.ArrowMore{
+    position: absolute;
+    top: .5em;
+    left: .8em;
+    z-index: 9999;
+    background: none;
+    border: 0;
+    margin: 0em 0 0 0;
+    padding: 0em 0 0 0;
+    width: 2.2em;
+    height: 2.2em;
+    background-image: url( Images/Icon/More.png);
+    background-position: center;
+    background-size: 100%;
+    background-repeat: repeat-x;
+}
+.Shre-Icon{
+    position: absolute;
+    top: 0.6em;
+    left: .8em;
+    z-index: 9999;
+    background: none;
+    border: 0;
+    margin: 0em 0 0 0;
+    padding: 0em 0 0 0;
+    width: 1.5em;
+    height: 1.5em;
+    background-image: url( Images/Icon/share.png);
+    background-position: center;
+    background-size: 97%;
+    background-repeat: no-repeat;
+}
+.topContainer{
+    background-color: #d9d9d9;
+    padding: 10px;
+}
+.divPosButton{width:10%;}
+.divPosLogo{width:60%; text-align: right;}
+.divPosMenu{width:10%; text-align: right;}
+
+#TopBar{
+    min-height: 4em;
+}
+
+/*TopHeader*/
+.Top-Header-List
+{
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+.Top-Header-List li
+{
+    padding: 0;
+    margin: 0;
+    display: inline-block;
+    float: left;
+}
+.Top-Header-List li:nth-child(1)
+{
+    width: 33.3%;
+    padding: .4em 0 0 0;
+    text-align: left;
+}
+.Top-Header-List li:nth-child(2)
+{
+    width: 33.3%;
+    text-align: center;
+}
+.Top-Header-List li:nth-child(2) img
+{
+    width: 3.4em;
+}
+.Top-Header-List li:nth-child(3)
+{
+    width: 33.3%;
+    text-align: right;
+}
+.Top-Header-List li:nth-child(1) img
+{
+    width: 1.5em;
+}
+.Top-Header-List li a
+{
+
+}

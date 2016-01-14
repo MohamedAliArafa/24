@@ -1,0 +1,1074 @@
+<!DOCTYPE html>
+<html dir="rtl">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+        <meta http-equiv="Content-Security-Policy" content="default-src *; style-src &apos;self&apos; &apos;unsafe-inline&apos;; script-src &apos;self&apos; &apos;unsafe-inline&apos; &apos;unsafe-eval&apos;">
+        <link href="lib/ionic/css/ionic.min.css" rel="stylesheet">
+        <link href="Design/MyCss.css" rel="stylesheet">
+        <script src="lib/ionic/js/ionic.bundle.js"></script>
+        <script src="js/app.js"></script>
+        <link href="Design/FontAr/Font.css" rel="stylesheet">
+        <link href="Design/Taps/MyCss2.css" rel="stylesheet">
+    </head>
+    <body ng-app="app">
+    <ion-pane ng-controller="MyController">
+
+        <ion-side-menus>
+            <ion-side-menu-content>
+                
+                
+                <ion-header-bar class="topContainer" id="TopBar">
+                    <ul class="Top-Header-List">
+                        <li><a href="#"><img src="Design/Images/Icon/Search.png"></a></li>
+                        <li><a href="index.html"><img src="Design/Images/Icon/logo.png"></a></li>
+                        <li><button class="MenuButton" ng-click="toggleLeft()"><i class="icon ion-android-menu"></i></button></li>
+                    </ul>
+                    <div class="Clear"></div>
+                </ion-header-bar>
+                
+     
+
+
+
+<ion-content style="overflow: hidden">
+    
+        <!--<div style="height: 6.3em"></div>-->
+    
+
+    <div class="Clear"></div>
+    
+    
+    <div class="tabs">
+
+       
+            <input type="radio" name="tabs" id="tab1">
+            <label for="tab1">
+                <span>&#x639;&#x627;&#x62C;&#x644;</span>
+            </label>
+
+            <input type="radio" name="tabs" id="tab2" checked>
+            <label for="tab2">
+                <span>&#x627;&#x644;&#x631;&#x626;&#x64A;&#x633;&#x64A;&#x629;</span>
+            </label>
+
+            <input type="radio" name="tabs" id="tab3">
+            <label for="tab3">
+                <span>&#x623;&#x643;&#x62B;&#x631; &#x627;&#x644;&#x642;&#x631;&#x627;&#x621;&#x627;&#x62A;</span>
+            </label>
+
+            <input type="radio" name="tabs" id="tab4">
+            <label for="tab4">
+                <span>&#x627;&#x644;&#x641;&#x64A;&#x62F;&#x64A;&#x648;</span>
+            </label>
+
+        <div id="tab-content1" class="tab-content">
+            <ion-view view-title="Main">
+                <ion-content class="padding">
+                    <ion-list>
+                        <h3 class="item">&#x639;&#x627;&#x62C;&#x644;</h3>
+                        <ion-item>
+                            <div class="item">
+                                <h2>&#x643;&#x648;&#x631;&#x64A;&#x627; &#x627;&#x644;&#x634;&#x645;&#x627;&#x644;&#x64A;&#x629; &#x62A;&#x64F;&#x647;&#x62F;&#x62F; &#x628;&#x645;&#x62D;&#x648; &#x627;&#x644;&#x648;&#x644;&#x627;&#x64A;&#x627;&#x62A; &#x627;&#x644;&#x645;&#x62A;&#x62D;&#x62F;&#x629; &#x645;&#x646; &#x639;&#x644;&#x649; &#x648;&#x62C;&#x647; &#x627;&#x644;&#x623;&#x631;&#x636; </h2>
+                                <p>
+                                    &#x642;&#x627;&#x644;&#x62A; &#x643;&#x648;&#x631;&#x64A;&#x627; &#x627;&#x644;&#x634;&#x645;&#x627;&#x644;&#x64A;&#x629; &#x627;&#x644;&#x62B;&#x644;&#x627;&#x62B;&#x627;&#x621; &#x625;&#x646;&#x647;&#x627; &#x645;&#x633;&#x62A;&#x639;&#x62F;&#x629; &#x644;&#x62A;&#x641;&#x62C;&#x64A;&#x631; &#x642;&#x646;&#x627;&#x628;&#x644; &#x647;&#x64A;&#x62F;&#x631;&#x648;&#x62C;&#x64A;&#x646;&#x64A;&#x629; &#x644;&#x645;&#x62D;&#x648; &#x627;&#x644;&#x648;&#x644;&#x627;&#x64A;&#x627;&#x62A; &#x627;&#x644;&#x645;&#x62A;&#x62D;&#x62F;&#x629; &#x645;&#x646; &#x627;&#x644;&#x648;&#x62C;&#x648;&#x62F; &quot;&#x645;&#x631;&#x629; &#x648;&#x627;&#x62D;&#x62F;&#x629;&quot; &#x62D;&#x633;&#x628; &#x645;&#x627; &#x646;&#x642;&#x644;&#x62A; &#x648;&#x643;&#x627;&#x644;&#x629; &#x64A;&#x648;&#x646;&#x647;&#x627;&#x628; &#x627;&#x644;&#x643;&#x648;&#x631;&#x64A;&#x629; &#x627;&#x644;&#x62C;&#x646;&#x648;&#x628;&#x64A;&#x629; &#x627;&#x644;&#x631;&#x633;&#x645;&#x64A;&#x629;.
+                                </p>
+                            </div>
+                            
+                            <div class="item">
+                                <h2>&#x645;&#x64A;&#x631;&#x643;&#x644; &#x628;&#x639;&#x62F; &#x627;&#x646;&#x641;&#x62C;&#x627;&#x631; &#x625;&#x633;&#x637;&#x646;&#x628;&#x648;&#x644;: &#x627;&#x644;&#x625;&#x631;&#x647;&#x627;&#x628;&#x64A;&#x648;&#x646; &#x623;&#x639;&#x62F;&#x627;&#x621; &#x643;&#x644; &#x627;&#x644;&#x628;&#x634;&#x631;  </h2>
+                                <p>
+                                    &#x623;&#x62F;&#x627;&#x646;&#x62A; &#x627;&#x644;&#x645;&#x633;&#x62A;&#x634;&#x627;&#x631;&#x629; &#x627;&#x644;&#x623;&#x644;&#x645;&#x627;&#x646;&#x64A;&#x629;&#x60C; &#x623;&#x646;&#x62C;&#x64A;&#x644;&#x627; &#x645;&#x64A;&#x631;&#x643;&#x644;&#x60C; &#x645;&#x62C;&#x62F;&#x62F;&#x627;&#x64B; &#x627;&#x644;&#x62A;&#x641;&#x62C;&#x64A;&#x631; &#x627;&#x644;&#x627;&#x646;&#x62A;&#x62D;&#x627;&#x631;&#x64A; &#x627;&#x644;&#x630;&#x64A; &#x648;&#x642;&#x639; &#x635;&#x628;&#x627;&#x62D; &#x627;&#x644;&#x64A;&#x648;&#x645; &#x627;&#x644;&#x62B;&#x644;&#x627;&#x62B;&#x627;&#x621;&#x60C; &#x641;&#x64A; &#x645;&#x62F;&#x64A;&#x646;&#x629; &#x625;&#x633;&#x637;&#x646;&#x628;&#x648;&#x644; &#x627;&#x644;&#x62A;&#x631;&#x643;&#x64A;&#x629;&#x60C; &#x648;&#x623;&#x633;&#x641;&#x631; &#x639;&#x646; &#x645;&#x642;&#x62A;&#x644; &#x62B;&#x645;&#x627;&#x646;&#x64A;&#x629; &#x623;&#x644;&#x645;&#x627;&#x646;&#x60C; &#x648;&#x648;&#x635;&#x641;&#x62A;&#x647; &#x628;&#x623;&#x646;&#x647; &quot;&#x639;&#x645;&#x644; ...
+                                </p>
+                            </div>
+                            <div class="item">
+                                <h2>&#x643;&#x648;&#x631;&#x64A;&#x627; &#x627;&#x644;&#x634;&#x645;&#x627;&#x644;&#x64A;&#x629; &#x62A;&#x64F;&#x647;&#x62F;&#x62F; &#x628;&#x645;&#x62D;&#x648; &#x627;&#x644;&#x648;&#x644;&#x627;&#x64A;&#x627;&#x62A; &#x627;&#x644;&#x645;&#x62A;&#x62D;&#x62F;&#x629; &#x645;&#x646; &#x639;&#x644;&#x649; &#x648;&#x62C;&#x647; &#x627;&#x644;&#x623;&#x631;&#x636; </h2>
+                                <p>
+                                    &#x642;&#x627;&#x644;&#x62A; &#x643;&#x648;&#x631;&#x64A;&#x627; &#x627;&#x644;&#x634;&#x645;&#x627;&#x644;&#x64A;&#x629; &#x627;&#x644;&#x62B;&#x644;&#x627;&#x62B;&#x627;&#x621; &#x625;&#x646;&#x647;&#x627; &#x645;&#x633;&#x62A;&#x639;&#x62F;&#x629; &#x644;&#x62A;&#x641;&#x62C;&#x64A;&#x631; &#x642;&#x646;&#x627;&#x628;&#x644; &#x647;&#x64A;&#x62F;&#x631;&#x648;&#x62C;&#x64A;&#x646;&#x64A;&#x629; &#x644;&#x645;&#x62D;&#x648; &#x627;&#x644;&#x648;&#x644;&#x627;&#x64A;&#x627;&#x62A; &#x627;&#x644;&#x645;&#x62A;&#x62D;&#x62F;&#x629; &#x645;&#x646; &#x627;&#x644;&#x648;&#x62C;&#x648;&#x62F; &quot;&#x645;&#x631;&#x629; &#x648;&#x627;&#x62D;&#x62F;&#x629;&quot; &#x62D;&#x633;&#x628; &#x645;&#x627; &#x646;&#x642;&#x644;&#x62A; &#x648;&#x643;&#x627;&#x644;&#x629; &#x64A;&#x648;&#x646;&#x647;&#x627;&#x628; &#x627;&#x644;&#x643;&#x648;&#x631;&#x64A;&#x629; &#x627;&#x644;&#x62C;&#x646;&#x648;&#x628;&#x64A;&#x629; &#x627;&#x644;&#x631;&#x633;&#x645;&#x64A;&#x629;.
+                                </p>
+                            </div>
+
+                            <div class="item">
+                                <h2>&#x645;&#x64A;&#x631;&#x643;&#x644; &#x628;&#x639;&#x62F; &#x627;&#x646;&#x641;&#x62C;&#x627;&#x631; &#x625;&#x633;&#x637;&#x646;&#x628;&#x648;&#x644;: &#x627;&#x644;&#x625;&#x631;&#x647;&#x627;&#x628;&#x64A;&#x648;&#x646; &#x623;&#x639;&#x62F;&#x627;&#x621; &#x643;&#x644; &#x627;&#x644;&#x628;&#x634;&#x631;  </h2>
+                                <p>
+                                    &#x623;&#x62F;&#x627;&#x646;&#x62A; &#x627;&#x644;&#x645;&#x633;&#x62A;&#x634;&#x627;&#x631;&#x629; &#x627;&#x644;&#x623;&#x644;&#x645;&#x627;&#x646;&#x64A;&#x629;&#x60C; &#x623;&#x646;&#x62C;&#x64A;&#x644;&#x627; &#x645;&#x64A;&#x631;&#x643;&#x644;&#x60C; &#x645;&#x62C;&#x62F;&#x62F;&#x627;&#x64B; &#x627;&#x644;&#x62A;&#x641;&#x62C;&#x64A;&#x631; &#x627;&#x644;&#x627;&#x646;&#x62A;&#x62D;&#x627;&#x631;&#x64A; &#x627;&#x644;&#x630;&#x64A; &#x648;&#x642;&#x639; &#x635;&#x628;&#x627;&#x62D; &#x627;&#x644;&#x64A;&#x648;&#x645; &#x627;&#x644;&#x62B;&#x644;&#x627;&#x62B;&#x627;&#x621;&#x60C; &#x641;&#x64A; &#x645;&#x62F;&#x64A;&#x646;&#x629; &#x625;&#x633;&#x637;&#x646;&#x628;&#x648;&#x644; &#x627;&#x644;&#x62A;&#x631;&#x643;&#x64A;&#x629;&#x60C; &#x648;&#x623;&#x633;&#x641;&#x631; &#x639;&#x646; &#x645;&#x642;&#x62A;&#x644; &#x62B;&#x645;&#x627;&#x646;&#x64A;&#x629; &#x623;&#x644;&#x645;&#x627;&#x646;&#x60C; &#x648;&#x648;&#x635;&#x641;&#x62A;&#x647; &#x628;&#x623;&#x646;&#x647; &quot;&#x639;&#x645;&#x644; ...
+                                </p>
+                            </div>
+                            <div class="item">
+                                <h2>&#x643;&#x648;&#x631;&#x64A;&#x627; &#x627;&#x644;&#x634;&#x645;&#x627;&#x644;&#x64A;&#x629; &#x62A;&#x64F;&#x647;&#x62F;&#x62F; &#x628;&#x645;&#x62D;&#x648; &#x627;&#x644;&#x648;&#x644;&#x627;&#x64A;&#x627;&#x62A; &#x627;&#x644;&#x645;&#x62A;&#x62D;&#x62F;&#x629; &#x645;&#x646; &#x639;&#x644;&#x649; &#x648;&#x62C;&#x647; &#x627;&#x644;&#x623;&#x631;&#x636; </h2>
+                                <p>
+                                    &#x642;&#x627;&#x644;&#x62A; &#x643;&#x648;&#x631;&#x64A;&#x627; &#x627;&#x644;&#x634;&#x645;&#x627;&#x644;&#x64A;&#x629; &#x627;&#x644;&#x62B;&#x644;&#x627;&#x62B;&#x627;&#x621; &#x625;&#x646;&#x647;&#x627; &#x645;&#x633;&#x62A;&#x639;&#x62F;&#x629; &#x644;&#x62A;&#x641;&#x62C;&#x64A;&#x631; &#x642;&#x646;&#x627;&#x628;&#x644; &#x647;&#x64A;&#x62F;&#x631;&#x648;&#x62C;&#x64A;&#x646;&#x64A;&#x629; &#x644;&#x645;&#x62D;&#x648; &#x627;&#x644;&#x648;&#x644;&#x627;&#x64A;&#x627;&#x62A; &#x627;&#x644;&#x645;&#x62A;&#x62D;&#x62F;&#x629; &#x645;&#x646; &#x627;&#x644;&#x648;&#x62C;&#x648;&#x62F; &quot;&#x645;&#x631;&#x629; &#x648;&#x627;&#x62D;&#x62F;&#x629;&quot; &#x62D;&#x633;&#x628; &#x645;&#x627; &#x646;&#x642;&#x644;&#x62A; &#x648;&#x643;&#x627;&#x644;&#x629; &#x64A;&#x648;&#x646;&#x647;&#x627;&#x628; &#x627;&#x644;&#x643;&#x648;&#x631;&#x64A;&#x629; &#x627;&#x644;&#x62C;&#x646;&#x648;&#x628;&#x64A;&#x629; &#x627;&#x644;&#x631;&#x633;&#x645;&#x64A;&#x629;.
+                                </p>
+                            </div>
+
+                            <div class="item">
+                                <h2>&#x645;&#x64A;&#x631;&#x643;&#x644; &#x628;&#x639;&#x62F; &#x627;&#x646;&#x641;&#x62C;&#x627;&#x631; &#x625;&#x633;&#x637;&#x646;&#x628;&#x648;&#x644;: &#x627;&#x644;&#x625;&#x631;&#x647;&#x627;&#x628;&#x64A;&#x648;&#x646; &#x623;&#x639;&#x62F;&#x627;&#x621; &#x643;&#x644; &#x627;&#x644;&#x628;&#x634;&#x631;  </h2>
+                                <p>
+                                    &#x623;&#x62F;&#x627;&#x646;&#x62A; &#x627;&#x644;&#x645;&#x633;&#x62A;&#x634;&#x627;&#x631;&#x629; &#x627;&#x644;&#x623;&#x644;&#x645;&#x627;&#x646;&#x64A;&#x629;&#x60C; &#x623;&#x646;&#x62C;&#x64A;&#x644;&#x627; &#x645;&#x64A;&#x631;&#x643;&#x644;&#x60C; &#x645;&#x62C;&#x62F;&#x62F;&#x627;&#x64B; &#x627;&#x644;&#x62A;&#x641;&#x62C;&#x64A;&#x631; &#x627;&#x644;&#x627;&#x646;&#x62A;&#x62D;&#x627;&#x631;&#x64A; &#x627;&#x644;&#x630;&#x64A; &#x648;&#x642;&#x639; &#x635;&#x628;&#x627;&#x62D; &#x627;&#x644;&#x64A;&#x648;&#x645; &#x627;&#x644;&#x62B;&#x644;&#x627;&#x62B;&#x627;&#x621;&#x60C; &#x641;&#x64A; &#x645;&#x62F;&#x64A;&#x646;&#x629; &#x625;&#x633;&#x637;&#x646;&#x628;&#x648;&#x644; &#x627;&#x644;&#x62A;&#x631;&#x643;&#x64A;&#x629;&#x60C; &#x648;&#x623;&#x633;&#x641;&#x631; &#x639;&#x646; &#x645;&#x642;&#x62A;&#x644; &#x62B;&#x645;&#x627;&#x646;&#x64A;&#x629; &#x623;&#x644;&#x645;&#x627;&#x646;&#x60C; &#x648;&#x648;&#x635;&#x641;&#x62A;&#x647; &#x628;&#x623;&#x646;&#x647; &quot;&#x639;&#x645;&#x644; ...
+                                </p>
+                            </div>
+                            <div class="item">
+                                <h2>&#x643;&#x648;&#x631;&#x64A;&#x627; &#x627;&#x644;&#x634;&#x645;&#x627;&#x644;&#x64A;&#x629; &#x62A;&#x64F;&#x647;&#x62F;&#x62F; &#x628;&#x645;&#x62D;&#x648; &#x627;&#x644;&#x648;&#x644;&#x627;&#x64A;&#x627;&#x62A; &#x627;&#x644;&#x645;&#x62A;&#x62D;&#x62F;&#x629; &#x645;&#x646; &#x639;&#x644;&#x649; &#x648;&#x62C;&#x647; &#x627;&#x644;&#x623;&#x631;&#x636; </h2>
+                                <p>
+                                    &#x642;&#x627;&#x644;&#x62A; &#x643;&#x648;&#x631;&#x64A;&#x627; &#x627;&#x644;&#x634;&#x645;&#x627;&#x644;&#x64A;&#x629; &#x627;&#x644;&#x62B;&#x644;&#x627;&#x62B;&#x627;&#x621; &#x625;&#x646;&#x647;&#x627; &#x645;&#x633;&#x62A;&#x639;&#x62F;&#x629; &#x644;&#x62A;&#x641;&#x62C;&#x64A;&#x631; &#x642;&#x646;&#x627;&#x628;&#x644; &#x647;&#x64A;&#x62F;&#x631;&#x648;&#x62C;&#x64A;&#x646;&#x64A;&#x629; &#x644;&#x645;&#x62D;&#x648; &#x627;&#x644;&#x648;&#x644;&#x627;&#x64A;&#x627;&#x62A; &#x627;&#x644;&#x645;&#x62A;&#x62D;&#x62F;&#x629; &#x645;&#x646; &#x627;&#x644;&#x648;&#x62C;&#x648;&#x62F; &quot;&#x645;&#x631;&#x629; &#x648;&#x627;&#x62D;&#x62F;&#x629;&quot; &#x62D;&#x633;&#x628; &#x645;&#x627; &#x646;&#x642;&#x644;&#x62A; &#x648;&#x643;&#x627;&#x644;&#x629; &#x64A;&#x648;&#x646;&#x647;&#x627;&#x628; &#x627;&#x644;&#x643;&#x648;&#x631;&#x64A;&#x629; &#x627;&#x644;&#x62C;&#x646;&#x648;&#x628;&#x64A;&#x629; &#x627;&#x644;&#x631;&#x633;&#x645;&#x64A;&#x629;.
+                                </p>
+                            </div>
+
+                            <div class="item">
+                                <h2>&#x645;&#x64A;&#x631;&#x643;&#x644; &#x628;&#x639;&#x62F; &#x627;&#x646;&#x641;&#x62C;&#x627;&#x631; &#x625;&#x633;&#x637;&#x646;&#x628;&#x648;&#x644;: &#x627;&#x644;&#x625;&#x631;&#x647;&#x627;&#x628;&#x64A;&#x648;&#x646; &#x623;&#x639;&#x62F;&#x627;&#x621; &#x643;&#x644; &#x627;&#x644;&#x628;&#x634;&#x631;  </h2>
+                                <p>
+                                    &#x623;&#x62F;&#x627;&#x646;&#x62A; &#x627;&#x644;&#x645;&#x633;&#x62A;&#x634;&#x627;&#x631;&#x629; &#x627;&#x644;&#x623;&#x644;&#x645;&#x627;&#x646;&#x64A;&#x629;&#x60C; &#x623;&#x646;&#x62C;&#x64A;&#x644;&#x627; &#x645;&#x64A;&#x631;&#x643;&#x644;&#x60C; &#x645;&#x62C;&#x62F;&#x62F;&#x627;&#x64B; &#x627;&#x644;&#x62A;&#x641;&#x62C;&#x64A;&#x631; &#x627;&#x644;&#x627;&#x646;&#x62A;&#x62D;&#x627;&#x631;&#x64A; &#x627;&#x644;&#x630;&#x64A; &#x648;&#x642;&#x639; &#x635;&#x628;&#x627;&#x62D; &#x627;&#x644;&#x64A;&#x648;&#x645; &#x627;&#x644;&#x62B;&#x644;&#x627;&#x62B;&#x627;&#x621;&#x60C; &#x641;&#x64A; &#x645;&#x62F;&#x64A;&#x646;&#x629; &#x625;&#x633;&#x637;&#x646;&#x628;&#x648;&#x644; &#x627;&#x644;&#x62A;&#x631;&#x643;&#x64A;&#x629;&#x60C; &#x648;&#x623;&#x633;&#x641;&#x631; &#x639;&#x646; &#x645;&#x642;&#x62A;&#x644; &#x62B;&#x645;&#x627;&#x646;&#x64A;&#x629; &#x623;&#x644;&#x645;&#x627;&#x646;&#x60C; &#x648;&#x648;&#x635;&#x641;&#x62A;&#x647; &#x628;&#x623;&#x646;&#x647; &quot;&#x639;&#x645;&#x644; ...
+                                </p>
+                            </div>
+                            <div class="item">
+                                <h2>&#x643;&#x648;&#x631;&#x64A;&#x627; &#x627;&#x644;&#x634;&#x645;&#x627;&#x644;&#x64A;&#x629; &#x62A;&#x64F;&#x647;&#x62F;&#x62F; &#x628;&#x645;&#x62D;&#x648; &#x627;&#x644;&#x648;&#x644;&#x627;&#x64A;&#x627;&#x62A; &#x627;&#x644;&#x645;&#x62A;&#x62D;&#x62F;&#x629; &#x645;&#x646; &#x639;&#x644;&#x649; &#x648;&#x62C;&#x647; &#x627;&#x644;&#x623;&#x631;&#x636; </h2>
+                                <p>
+                                    &#x642;&#x627;&#x644;&#x62A; &#x643;&#x648;&#x631;&#x64A;&#x627; &#x627;&#x644;&#x634;&#x645;&#x627;&#x644;&#x64A;&#x629; &#x627;&#x644;&#x62B;&#x644;&#x627;&#x62B;&#x627;&#x621; &#x625;&#x646;&#x647;&#x627; &#x645;&#x633;&#x62A;&#x639;&#x62F;&#x629; &#x644;&#x62A;&#x641;&#x62C;&#x64A;&#x631; &#x642;&#x646;&#x627;&#x628;&#x644; &#x647;&#x64A;&#x62F;&#x631;&#x648;&#x62C;&#x64A;&#x646;&#x64A;&#x629; &#x644;&#x645;&#x62D;&#x648; &#x627;&#x644;&#x648;&#x644;&#x627;&#x64A;&#x627;&#x62A; &#x627;&#x644;&#x645;&#x62A;&#x62D;&#x62F;&#x629; &#x645;&#x646; &#x627;&#x644;&#x648;&#x62C;&#x648;&#x62F; &quot;&#x645;&#x631;&#x629; &#x648;&#x627;&#x62D;&#x62F;&#x629;&quot; &#x62D;&#x633;&#x628; &#x645;&#x627; &#x646;&#x642;&#x644;&#x62A; &#x648;&#x643;&#x627;&#x644;&#x629; &#x64A;&#x648;&#x646;&#x647;&#x627;&#x628; &#x627;&#x644;&#x643;&#x648;&#x631;&#x64A;&#x629; &#x627;&#x644;&#x62C;&#x646;&#x648;&#x628;&#x64A;&#x629; &#x627;&#x644;&#x631;&#x633;&#x645;&#x64A;&#x629;.
+                                </p>
+                            </div>
+
+                            <div class="item">
+                                <h2>&#x645;&#x64A;&#x631;&#x643;&#x644; &#x628;&#x639;&#x62F; &#x627;&#x646;&#x641;&#x62C;&#x627;&#x631; &#x625;&#x633;&#x637;&#x646;&#x628;&#x648;&#x644;: &#x627;&#x644;&#x625;&#x631;&#x647;&#x627;&#x628;&#x64A;&#x648;&#x646; &#x623;&#x639;&#x62F;&#x627;&#x621; &#x643;&#x644; &#x627;&#x644;&#x628;&#x634;&#x631;  </h2>
+                                <p>
+                                    &#x623;&#x62F;&#x627;&#x646;&#x62A; &#x627;&#x644;&#x645;&#x633;&#x62A;&#x634;&#x627;&#x631;&#x629; &#x627;&#x644;&#x623;&#x644;&#x645;&#x627;&#x646;&#x64A;&#x629;&#x60C; &#x623;&#x646;&#x62C;&#x64A;&#x644;&#x627; &#x645;&#x64A;&#x631;&#x643;&#x644;&#x60C; &#x645;&#x62C;&#x62F;&#x62F;&#x627;&#x64B; &#x627;&#x644;&#x62A;&#x641;&#x62C;&#x64A;&#x631; &#x627;&#x644;&#x627;&#x646;&#x62A;&#x62D;&#x627;&#x631;&#x64A; &#x627;&#x644;&#x630;&#x64A; &#x648;&#x642;&#x639; &#x635;&#x628;&#x627;&#x62D; &#x627;&#x644;&#x64A;&#x648;&#x645; &#x627;&#x644;&#x62B;&#x644;&#x627;&#x62B;&#x627;&#x621;&#x60C; &#x641;&#x64A; &#x645;&#x62F;&#x64A;&#x646;&#x629; &#x625;&#x633;&#x637;&#x646;&#x628;&#x648;&#x644; &#x627;&#x644;&#x62A;&#x631;&#x643;&#x64A;&#x629;&#x60C; &#x648;&#x623;&#x633;&#x641;&#x631; &#x639;&#x646; &#x645;&#x642;&#x62A;&#x644; &#x62B;&#x645;&#x627;&#x646;&#x64A;&#x629; &#x623;&#x644;&#x645;&#x627;&#x646;&#x60C; &#x648;&#x648;&#x635;&#x641;&#x62A;&#x647; &#x628;&#x623;&#x646;&#x647; &quot;&#x639;&#x645;&#x644; ...
+                                </p>
+                            </div>
+                        </ion-item>
+                    </ion-list>
+                    
+                </ion-content>
+            </ion-view>
+            
+        </div> <!-- #tab-content1 -->
+
+        <div id="tab-content2" class="tab-content">
+        
+            <ion-view view-title="Main">
+                <ion-content class="padding">
+                    Arabic Main Article
+                    <ion-list>
+                        <a href="News.html">
+                            <h1 class="item bg-Arabic">
+                                &#x639;&#x631;&#x628;&#x64A;
+                                <span class="ArrowMore Left"></span>
+                            </h1>
+                        </a>
+
+                        <ion-item ng-repeat="article in model.ArabicMain" class="No-Item">
+
+                            <div class="MainNewsImgWrapper">
+                                <img src="{{article.BigImageUrl}}" class="img_small">
+                                <div class="TitleWrapper">
+                                    <div class="TitleWrapper-Title">
+                                        {{ article.Title}}
+                                    </div>
+
+                                </div>
+                            </div>
+                            <!--<div class="item item-text-wrap No-Item txt-Description">
+                                {{ article.Title}}
+                            </div>-->
+                            <div class="item item-divider item item-text-wrap txt-Source">
+                                <i>&#x627;&#x644;&#x645;&#x635;&#x62F;&#x631;:{{ article.TheSource}}</i>
+                                <a href="#"><span class="Shre-Icon Left"></span></a>
+                            </div>
+                        </ion-item>
+
+                        <div class="Block-Margin-Bottom1 Clear"></div>
+
+                        
+                            <ion-item ng-repeat="article in model.ArabicArticles" class="No-Item">
+
+                                <div class="row">
+
+                                    <div class="col">
+                                        <div class="item item-divider No-Item">
+                                            <img src="{{article.ImageUrl}}" class="img_small">
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="item item-divider No-Item Title-Three">
+                                            {{ article.Title}}
+                                        </div>
+                                        <div class="item item-text-wrap txt-Description No-Item">
+                                            {{ article.Title}}
+                                        </div>
+                                    </div>
+                                </div>
+
+                                
+                                
+                                <div class="item item-divider item item-text-wrap txt-Source">
+                                    <i>&#x627;&#x644;&#x645;&#x635;&#x62F;&#x631;:{{article.TheSource}}</i>
+                                    <a href="#"><span class="Shre-Icon Left"></span></a>
+                                </div>
+
+                                <div class="Block-Margin-Bottom1 Clear"></div>
+                                
+                            </ion-item>
+                    </ion-list>
+
+                    
+                    <ion-list>
+                        <a href="#">
+                            <h1 class="item bg-International">
+                                &#x62F;&#x648;&#x644;&#x64A;<span class="ArrowMore Left"></span>
+                            </h1>
+                        </a>
+                        <ion-item ng-repeat="article in model.InternationalMain" class="No-Item">
+                            <div class="MainNewsImgWrapper">
+                                <img src="{{article.BigImageUrl}}" class="img_small">
+                                <div class="TitleWrapper">
+                                    <div class="TitleWrapper-Title">
+                                        {{ article.Title}}
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="item item-divider item item-text-wrap txt-Source">
+                                <i>&#x627;&#x644;&#x645;&#x635;&#x62F;&#x631;:{{ article.TheSource}}</i>
+                                <a href="#"><span class="Shre-Icon Left"></span></a>
+                            </div>
+                        </ion-item>
+
+                        <div class="Block-Margin-Bottom1 Clear"></div>
+
+                        
+                            <ion-item ng-repeat="article in model.InternationalArticles" class="No-Item">
+
+                                <div class="row">
+
+                                    <div class="col">
+                                        <div class="item item-divider No-Item">
+                                            <img src="{{article.ImageUrl}}" class="img_small">
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="item item-divider No-Item Title-Three">
+                                            {{ article.Title}}
+                                        </div>
+                                        <div class="item item-text-wrap txt-Description No-Item">
+                                            {{ article.Title}}
+                                        </div>
+                                    </div>
+                                </div>
+
+                                
+                                
+                                <div class="item item-divider item item-text-wrap txt-Source">
+                                    <i>&#x627;&#x644;&#x645;&#x635;&#x62F;&#x631;:{{article.TheSource}}</i>
+                                    <a href="#"><span class="Shre-Icon Left"></span></a>
+                                </div>
+
+                                <div class="Block-Margin-Bottom1 Clear"></div>
+                                
+                            </ion-item>
+
+                    </ion-list>
+
+                    <ion-list>
+                        
+                        <a href="#">
+                            <h1 class="item bg-UAE">
+                                &#x627;&#x644;&#x625;&#x645;&#x627;&#x631;&#x627;&#x62A;<span class="ArrowMore Left"></span>
+                            </h1>
+                        </a>
+                        <ion-item ng-repeat="article in model.UAEArticles" class="No-Item">
+
+                                <div class="row">
+
+                                    <div class="col">
+                                        <div class="item item-divider No-Item">
+                                            <img src="{{article.ImageUrl}}" class="img_small">
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="item item-divider No-Item Title-Three">
+                                            {{ article.Title}}
+                                        </div>
+                                        <div class="item item-text-wrap txt-Description No-Item">
+                                            {{ article.Title}}
+                                        </div>
+                                    </div>
+                                </div>
+
+                                
+                                
+                                <div class="item item-divider item item-text-wrap txt-Source">
+                                    <i>&#x627;&#x644;&#x645;&#x635;&#x62F;&#x631;:{{article.TheSource}}</i>
+                                    <a href="#"><span class="Shre-Icon Left"></span></a>
+                                </div>
+
+                                <div class="Block-Margin-Bottom1 Clear"></div>
+                                
+                            </ion-item>
+
+
+                    
+                    <a href="#">
+                        <h1 class="item bg-Article">
+                            &#x625;&#x62A;&#x62C;&#x627;&#x647;&#x627;&#x62A;<span class="ArrowMore Left"></span>
+                        </h1>
+                    </a>
+                    <ion-list>
+                        <ion-item ng-repeat="article in model.DirectionsMain" class="No-Item">
+                            <div class="MainNewsImgWrapper">
+                                <img src="{{article.BigImageUrl}}" class="img_small">
+                                <div class="TitleWrapper">
+                                    <div class="TitleWrapper-Title">
+                                        {{ article.Title}}
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="item item-divider item item-text-wrap txt-Source">
+                                <i>&#x627;&#x644;&#x645;&#x635;&#x62F;&#x631;:{{ article.TheSource}}</i>
+                                <a href="#"><span class="Shre-Icon Left"></span></a>
+                            </div>
+                        </ion-item>
+
+                        <div class="Block-Margin-Bottom1 Clear"></div>
+
+                        
+                            <ion-item ng-repeat="article in model.DirectionsArticles" class="No-Item">
+
+                                <div class="row">
+
+                                    <div class="col">
+                                        <div class="item item-divider No-Item">
+                                            <img src="{{article.ImageUrl}}" class="img_small">
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="item item-divider No-Item Title-Three">
+                                            {{ article.Title}}
+                                        </div>
+                                        <div class="item item-text-wrap txt-Description No-Item">
+                                            {{ article.Title}}
+                                        </div>
+                                    </div>
+                                </div>
+
+                                
+                                
+                                <div class="item item-divider item item-text-wrap txt-Source">
+                                    <i>&#x627;&#x644;&#x645;&#x635;&#x62F;&#x631;:{{article.TheSource}}</i>
+                                    <a href="#"><span class="Shre-Icon Left"></span></a>
+                                </div>
+
+                                <div class="Block-Margin-Bottom1 Clear"></div>
+                                
+                            </ion-item>
+
+                    </ion-list>
+
+
+                    <a href="#">
+                        <h1 class="item bg-Technology">
+                            &#x62A;&#x643;&#x646;&#x648;&#x644;&#x648;&#x62C;&#x64A;&#x627;<span class="ArrowMore Left"></span>
+                        </h1>
+                    </a>
+                    <ion-list>
+                        <ion-item ng-repeat="article in model.TechnologyMain" class="No-Item">
+                            <div class="MainNewsImgWrapper">
+                                <img src="{{article.BigImageUrl}}" class="img_small">
+                                <div class="TitleWrapper">
+                                    <div class="TitleWrapper-Title">
+                                        {{ article.Title}}
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="item item-divider item item-text-wrap txt-Source">
+                                <i>&#x627;&#x644;&#x645;&#x635;&#x62F;&#x631;:{{ article.TheSource}}</i>
+                                <a href="#"><span class="Shre-Icon Left"></span></a>
+                            </div>
+                        </ion-item>
+
+                        <div class="Block-Margin-Bottom1 Clear"></div>
+
+                            <ion-item ng-repeat="article in model.TechnologyArticles" class="No-Item">
+
+                                <div class="row">
+
+                                    <div class="col">
+                                        <div class="item item-divider No-Item">
+                                            <img src="{{article.ImageUrl}}" class="img_small">
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="item item-divider No-Item Title-Three">
+                                            {{ article.Title}}
+                                        </div>
+                                        <div class="item item-text-wrap txt-Description No-Item">
+                                            {{ article.Title}}
+                                        </div>
+                                    </div>
+                                </div>
+
+                                
+                                
+                                <div class="item item-divider item item-text-wrap txt-Source">
+                                    <i>&#x627;&#x644;&#x645;&#x635;&#x62F;&#x631;:{{article.TheSource}}</i>
+                                    <a href="#"><span class="Shre-Icon Left"></span></a>
+                                </div>
+
+                                <div class="Block-Margin-Bottom1 Clear"></div>
+                                
+                            </ion-item>
+
+                    </ion-list>
+
+                    <a href="#">
+                        <h1 class="item bg-Health">
+                            &#x635;&#x62D;&#x629;<span class="ArrowMore Left"></span>
+                        </h1>
+                    </a>
+                    <ion-list>
+                        <ion-item ng-repeat="article in model.HealthMain" class="No-Item">
+                            <div class="MainNewsImgWrapper">
+                                <img src="{{article.BigImageUrl}}" class="img_small">
+                                <div class="TitleWrapper">
+                                    <div class="TitleWrapper-Title">
+                                        {{ article.Title}}
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="item item-divider item item-text-wrap txt-Source">
+                                <i>&#x627;&#x644;&#x645;&#x635;&#x62F;&#x631;:{{ article.TheSource}}</i>
+                                <a href="#"><span class="Shre-Icon Left"></span></a>
+                            </div>
+                        </ion-item>
+
+                        <div class="Block-Margin-Bottom1 Clear"></div>
+
+                            <ion-item ng-repeat="article in model.HealthArticles" class="No-Item">
+
+                                <div class="row">
+
+                                    <div class="col">
+                                        <div class="item item-divider No-Item">
+                                            <img src="{{article.ImageUrl}}" class="img_small">
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="item item-divider No-Item Title-Three">
+                                            {{ article.Title}}
+                                        </div>
+                                        <div class="item item-text-wrap txt-Description No-Item">
+                                            {{ article.Title}}
+                                        </div>
+                                    </div>
+                                </div>
+
+                                
+                                
+                                <div class="item item-divider item item-text-wrap txt-Source">
+                                    <i>&#x627;&#x644;&#x645;&#x635;&#x62F;&#x631;:{{article.TheSource}}</i>
+                                    <a href="#"><span class="Shre-Icon Left"></span></a>
+                                </div>
+
+                                <div class="Block-Margin-Bottom1 Clear"></div>
+                                
+                            </ion-item>
+
+                    </ion-list>
+
+
+                        
+                        <a href="#">
+                            <h1 class="item bg-Sport">
+                                &#x645;&#x644;&#x627;&#x639;&#x628;<span class="ArrowMore Left"></span>
+                            </h1>
+                        </a>
+                        <ion-item ng-repeat="article in model.SportArticles" class="No-Item">
+
+                                <div class="row">
+
+                                    <div class="col">
+                                        <div class="item item-divider No-Item">
+                                            <img src="{{article.ImageUrl}}" class="img_small">
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="item item-divider No-Item Title-Three">
+                                            {{ article.Title}}
+                                        </div>
+                                        <div class="item item-text-wrap txt-Description No-Item">
+                                            {{ article.Title}}
+                                        </div>
+                                    </div>
+                                </div>
+
+                                
+                                
+                                <div class="item item-divider item item-text-wrap txt-Source">
+                                    <i>&#x627;&#x644;&#x645;&#x635;&#x62F;&#x631;:{{article.TheSource}}</i>
+                                    <a href="#"><span class="Shre-Icon Left"></span></a>
+                                </div>
+
+                                <div class="Block-Margin-Bottom1 Clear"></div>
+                                
+                            </ion-item>
+
+
+                            <a href="#">
+                                <h1 class="item bg-LifeStyle">
+                                    &#x644;&#x627;&#x64A;&#x641; &#x633;&#x62A;&#x627;&#x64A;&#x644;
+                                    <span class="ArrowMore Left"></span>
+                                </h1>
+                            </a>
+                        <ion-item ng-repeat="article in model.LifeStyleMain" class="No-Item">
+                            <div class="MainNewsImgWrapper">
+                                <img src="{{article.BigImageUrl}}" class="img_small">
+                                <div class="TitleWrapper">
+                                    <div class="TitleWrapper-Title">
+                                        {{ article.Title}}
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="item item-divider item item-text-wrap txt-Source">
+                                <i>&#x627;&#x644;&#x645;&#x635;&#x62F;&#x631;:{{ article.TheSource}}</i>
+                                <a href="#"><span class="Shre-Icon Left"></span></a>
+                            </div>
+                        </ion-item>
+
+                        <div class="Block-Margin-Bottom1 Clear"></div>
+
+
+                                <ion-item ng-repeat="article in model.LifeStyleArticles" class="No-Item">
+
+                                <div class="row">
+
+                                    <div class="col">
+                                        <div class="item item-divider No-Item">
+                                            <img src="{{article.ImageUrl}}" class="img_small">
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="item item-divider No-Item Title-Three">
+                                            {{ article.Title}}
+                                        </div>
+                                        <div class="item item-text-wrap txt-Description No-Item">
+                                            {{ article.Title}}
+                                        </div>
+                                    </div>
+                                </div>
+
+                                
+                                
+                                <div class="item item-divider item item-text-wrap txt-Source">
+                                    <i>&#x627;&#x644;&#x645;&#x635;&#x62F;&#x631;:{{article.TheSource}}</i>
+                                    <a href="#"><span class="Shre-Icon Left"></span></a>
+                                </div>
+
+                                <div class="Block-Margin-Bottom1 Clear"></div>
+                                
+                            </ion-item>
+
+                        </ion-list>
+
+
+                        <a href="#">
+                            <h1 class="item bg-Varitiess">
+                                &#x645;&#x646;&#x648;&#x639;&#x627;&#x62A;
+                                <span class="ArrowMore Left"></span>
+                            </h1>
+                        </a>
+                        <ion-list>
+                            <ion-item ng-repeat="article in model.VaritiessMain" class="No-Item">
+                                <div class="MainNewsImgWrapper">
+                                    <img src="{{article.BigImageUrl}}" class="img_small">
+                                    <div class="TitleWrapper">
+                                        <div class="TitleWrapper-Title">
+                                            {{ article.Title}}
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="item item-divider item item-text-wrap txt-Source">
+                                    <i>&#x627;&#x644;&#x645;&#x635;&#x62F;&#x631;:{{ article.TheSource}}</i>
+                                    <a href="#"><span class="Shre-Icon Left"></span></a>
+                                </div>
+                            </ion-item>
+
+                            <div class="Block-Margin-Bottom1 Clear"></div>
+
+                                <ion-item ng-repeat="article in model.VaritiesArticles" class="No-Item">
+
+                                <div class="row">
+
+                                    <div class="col">
+                                        <div class="item item-divider No-Item">
+                                            <img src="{{article.ImageUrl}}" class="img_small">
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="item item-divider No-Item Title-Three">
+                                            {{ article.Title}}
+                                        </div>
+                                        <div class="item item-text-wrap txt-Description No-Item">
+                                            {{ article.Title}}
+                                        </div>
+                                    </div>
+                                </div>
+
+                                
+                                
+                                <div class="item item-divider item item-text-wrap txt-Source">
+                                    <i>&#x627;&#x644;&#x645;&#x635;&#x62F;&#x631;:{{article.TheSource}}</i>
+                                    <a href="#"><span class="Shre-Icon Left"></span></a>
+                                </div>
+
+                                <div class="Block-Margin-Bottom1 Clear"></div>
+                                
+                            </ion-item>
+
+                        </ion-list>
+
+                        <a href="#">
+                            <h1 class="item bg-Bsiness">
+                                &#x645;&#x627;&#x644; &#x648;&#x623;&#x639;&#x645;&#x627;&#x644;<span class="ArrowMore Left"></span>
+                            </h1>
+                        </a>
+                        <ion-list>
+                            <ion-item ng-repeat="article in model.BusinessMain" class="No-Item">
+                                <div class="MainNewsImgWrapper">
+                                    <img src="{{article.BigImageUrl}}" class="img_small">
+                                    <div class="TitleWrapper">
+                                        <div class="TitleWrapper-Title">
+                                            {{ article.Title}}
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="item item-divider item item-text-wrap txt-Source">
+                                    <i>&#x627;&#x644;&#x645;&#x635;&#x62F;&#x631;:{{ article.TheSource}}</i>
+                                    <a href="#"><span class="Shre-Icon Left"></span></a>
+                                </div>
+                            </ion-item>
+
+                            <div class="Block-Margin-Bottom1 Clear"></div>
+
+                                <ion-item ng-repeat="article in model.BusinessArticles" class="No-Item">
+
+                                <div class="row">
+
+                                    <div class="col">
+                                        <div class="item item-divider No-Item">
+                                            <img src="{{article.ImageUrl}}" class="img_small">
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="item item-divider No-Item Title-Three">
+                                            {{ article.Title}}
+                                        </div>
+                                        <div class="item item-text-wrap txt-Description No-Item">
+                                            {{ article.Title}}
+                                        </div>
+                                    </div>
+                                </div>
+
+                                
+                                
+                                <div class="item item-divider item item-text-wrap txt-Source">
+                                    <i>&#x627;&#x644;&#x645;&#x635;&#x62F;&#x631;:{{article.TheSource}}</i>
+                                    <a href="#"><span class="Shre-Icon Left"></span></a>
+                                </div>
+
+                                <div class="Block-Margin-Bottom1 Clear"></div>
+                                
+                            </ion-item>
+
+                        </ion-list>
+
+
+                        <ion-list>
+                            <a href="#">
+                                <h1 class="item bg-Culture">
+                                    &#x62B;&#x642;&#x627;&#x641;&#x629;<span class="ArrowMore Left"></span>
+                                </h1>
+                            </a>
+                            <ion-item ng-repeat="article in model.CultureMain" class="No-Item">
+                                <div class="MainNewsImgWrapper">
+                                    <img src="{{article.BigImageUrl}}" class="img_small">
+                                    <div class="TitleWrapper">
+                                        <div class="TitleWrapper-Title">
+                                            {{ article.Title}}
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="item item-divider item item-text-wrap txt-Source">
+                                    <i>&#x627;&#x644;&#x645;&#x635;&#x62F;&#x631;:{{ article.TheSource}}</i>
+                                    <a href="#"><span class="Shre-Icon Left"></span></a>
+                                </div>
+                            </ion-item>
+
+                            <div class="Block-Margin-Bottom1 Clear"></div>
+
+                                <ion-item ng-repeat="article in model.CultureArticles" class="No-Item">
+
+                                <div class="row">
+
+                                    <div class="col">
+                                        <div class="item item-divider No-Item">
+                                            <img src="{{article.ImageUrl}}" class="img_small">
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="item item-divider No-Item Title-Three">
+                                            {{ article.Title}}
+                                        </div>
+                                        <div class="item item-text-wrap txt-Description No-Item">
+                                            {{ article.Title}}
+                                        </div>
+                                    </div>
+                                </div>
+
+                                
+                                
+                                <div class="item item-divider item item-text-wrap txt-Source">
+                                    <i>&#x627;&#x644;&#x645;&#x635;&#x62F;&#x631;:{{article.TheSource}}</i>
+                                    <a href="#"><span class="Shre-Icon Left"></span></a>
+                                </div>
+
+                                <div class="Block-Margin-Bottom1 Clear"></div>
+                                
+                            </ion-item>
+
+                        </ion-list>
+
+                        <a href="#">
+                            <h1 class="item bg-Youth">
+                                &#x634;&#x628;&#x627;&#x628;<span class="ArrowMore Left"></span>
+                            </h1>
+                        </a>
+                        <ion-list>
+                            <ion-item ng-repeat="article in model.YouthMain" class="No-Item">
+                                <div class="MainNewsImgWrapper">
+                                    <img src="{{article.BigImageUrl}}" class="img_small">
+                                    <div class="TitleWrapper">
+                                        <div class="TitleWrapper-Title">
+                                            {{ article.Title}}
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="item item-divider item item-text-wrap txt-Source">
+                                    <i>&#x627;&#x644;&#x645;&#x635;&#x62F;&#x631;:{{ article.TheSource}}</i>
+                                    <a href="#"><span class="Shre-Icon Left"></span></a>
+                                </div>
+                            </ion-item>
+
+                            <div class="Block-Margin-Bottom1 Clear"></div>
+
+                                <ion-item ng-repeat="article in model.YouthArticles" class="No-Item">
+
+                                <div class="row">
+
+                                    <div class="col">
+                                        <div class="item item-divider No-Item">
+                                            <img src="{{article.ImageUrl}}" class="img_small">
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="item item-divider No-Item Title-Three">
+                                            {{ article.Title}}
+                                        </div>
+                                        <div class="item item-text-wrap txt-Description No-Item">
+                                            {{ article.Title}}
+                                        </div>
+                                    </div>
+                                </div>
+
+                                
+                                
+                                <div class="item item-divider item item-text-wrap txt-Source">
+                                    <i>&#x627;&#x644;&#x645;&#x635;&#x62F;&#x631;:{{article.TheSource}}</i>
+                                    <a href="#"><span class="Shre-Icon Left"></span></a>
+                                </div>
+
+                                <div class="Block-Margin-Bottom1 Clear"></div>
+                                
+                            </ion-item>
+
+                        </ion-list>
+
+
+
+                        <a href="#">
+                            <h1 class="item bg-Pictures">
+                                &#x627;&#x644;&#x635;&#x648;&#x631;
+                                <span class="ArrowMore Left"></span>
+                            </h1>
+                        </a>
+
+
+                            <ion-item ng-repeat="article in model.Pictures" class="No-Item">
+
+                                <div class="row">
+
+                                    <div class="col">
+                                        <div class="item item-divider No-Item">
+                                            <img src="{{article.ImageUrl}}" class="img_small">
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="item item-divider No-Item Title-Three">
+                                            {{ article.Title}}
+                                        </div>
+                                        <div class="item item-text-wrap txt-Description No-Item">
+                                            {{ article.Title}}
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item item-divider item item-text-wrap txt-Source">
+                                    <i>&#x627;&#x644;&#x645;&#x635;&#x62F;&#x631;:{{contact.TheSource}}</i>
+                                    <a href="#"><span class="Shre-Icon Left"></span></a>
+                                </div>
+                            </ion-item>
+
+                            <div class="Block-Margin-Bottom1 Clear"></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</ion-content>
+            </ion-view>
+
+        </div> <!-- #tab-content2 -->
+
+        <div id="tab-content3" class="tab-content">
+
+            <ion-view view-title="Main">
+                <ion-content class="padding">
+                    <ion-list>
+                        <h3 class="item">&#x623;&#x643;&#x62B;&#x631; &#x627;&#x644;&#x642;&#x631;&#x627;&#x621;&#x627;&#x62A;</h3>
+                        <ion-item>
+                            <div class="item">
+                                <h2>&#x643;&#x648;&#x631;&#x64A;&#x627; &#x627;&#x644;&#x634;&#x645;&#x627;&#x644;&#x64A;&#x629; &#x62A;&#x64F;&#x647;&#x62F;&#x62F; &#x628;&#x645;&#x62D;&#x648; &#x627;&#x644;&#x648;&#x644;&#x627;&#x64A;&#x627;&#x62A; &#x627;&#x644;&#x645;&#x62A;&#x62D;&#x62F;&#x629; &#x645;&#x646; &#x639;&#x644;&#x649; &#x648;&#x62C;&#x647; &#x627;&#x644;&#x623;&#x631;&#x636; </h2>
+                                <p>
+                                    &#x642;&#x627;&#x644;&#x62A; &#x643;&#x648;&#x631;&#x64A;&#x627; &#x627;&#x644;&#x634;&#x645;&#x627;&#x644;&#x64A;&#x629; &#x627;&#x644;&#x62B;&#x644;&#x627;&#x62B;&#x627;&#x621; &#x625;&#x646;&#x647;&#x627; &#x645;&#x633;&#x62A;&#x639;&#x62F;&#x629; &#x644;&#x62A;&#x641;&#x62C;&#x64A;&#x631; &#x642;&#x646;&#x627;&#x628;&#x644; &#x647;&#x64A;&#x62F;&#x631;&#x648;&#x62C;&#x64A;&#x646;&#x64A;&#x629; &#x644;&#x645;&#x62D;&#x648; &#x627;&#x644;&#x648;&#x644;&#x627;&#x64A;&#x627;&#x62A; &#x627;&#x644;&#x645;&#x62A;&#x62D;&#x62F;&#x629; &#x645;&#x646; &#x627;&#x644;&#x648;&#x62C;&#x648;&#x62F; &quot;&#x645;&#x631;&#x629; &#x648;&#x627;&#x62D;&#x62F;&#x629;&quot; &#x62D;&#x633;&#x628; &#x645;&#x627; &#x646;&#x642;&#x644;&#x62A; &#x648;&#x643;&#x627;&#x644;&#x629; &#x64A;&#x648;&#x646;&#x647;&#x627;&#x628; &#x627;&#x644;&#x643;&#x648;&#x631;&#x64A;&#x629; &#x627;&#x644;&#x62C;&#x646;&#x648;&#x628;&#x64A;&#x629; &#x627;&#x644;&#x631;&#x633;&#x645;&#x64A;&#x629;.
+                                </p>
+                            </div>
+
+                            <div class="item">
+                                <h2>&#x645;&#x64A;&#x631;&#x643;&#x644; &#x628;&#x639;&#x62F; &#x627;&#x646;&#x641;&#x62C;&#x627;&#x631; &#x625;&#x633;&#x637;&#x646;&#x628;&#x648;&#x644;: &#x627;&#x644;&#x625;&#x631;&#x647;&#x627;&#x628;&#x64A;&#x648;&#x646; &#x623;&#x639;&#x62F;&#x627;&#x621; &#x643;&#x644; &#x627;&#x644;&#x628;&#x634;&#x631;  </h2>
+                                <p>
+                                    &#x623;&#x62F;&#x627;&#x646;&#x62A; &#x627;&#x644;&#x645;&#x633;&#x62A;&#x634;&#x627;&#x631;&#x629; &#x627;&#x644;&#x623;&#x644;&#x645;&#x627;&#x646;&#x64A;&#x629;&#x60C; &#x623;&#x646;&#x62C;&#x64A;&#x644;&#x627; &#x645;&#x64A;&#x631;&#x643;&#x644;&#x60C; &#x645;&#x62C;&#x62F;&#x62F;&#x627;&#x64B; &#x627;&#x644;&#x62A;&#x641;&#x62C;&#x64A;&#x631; &#x627;&#x644;&#x627;&#x646;&#x62A;&#x62D;&#x627;&#x631;&#x64A; &#x627;&#x644;&#x630;&#x64A; &#x648;&#x642;&#x639; &#x635;&#x628;&#x627;&#x62D; &#x627;&#x644;&#x64A;&#x648;&#x645; &#x627;&#x644;&#x62B;&#x644;&#x627;&#x62B;&#x627;&#x621;&#x60C; &#x641;&#x64A; &#x645;&#x62F;&#x64A;&#x646;&#x629; &#x625;&#x633;&#x637;&#x646;&#x628;&#x648;&#x644; &#x627;&#x644;&#x62A;&#x631;&#x643;&#x64A;&#x629;&#x60C; &#x648;&#x623;&#x633;&#x641;&#x631; &#x639;&#x646; &#x645;&#x642;&#x62A;&#x644; &#x62B;&#x645;&#x627;&#x646;&#x64A;&#x629; &#x623;&#x644;&#x645;&#x627;&#x646;&#x60C; &#x648;&#x648;&#x635;&#x641;&#x62A;&#x647; &#x628;&#x623;&#x646;&#x647; &quot;&#x639;&#x645;&#x644; ...
+                                </p>
+                            </div>
+                            <div class="item">
+                                <h2>&#x643;&#x648;&#x631;&#x64A;&#x627; &#x627;&#x644;&#x634;&#x645;&#x627;&#x644;&#x64A;&#x629; &#x62A;&#x64F;&#x647;&#x62F;&#x62F; &#x628;&#x645;&#x62D;&#x648; &#x627;&#x644;&#x648;&#x644;&#x627;&#x64A;&#x627;&#x62A; &#x627;&#x644;&#x645;&#x62A;&#x62D;&#x62F;&#x629; &#x645;&#x646; &#x639;&#x644;&#x649; &#x648;&#x62C;&#x647; &#x627;&#x644;&#x623;&#x631;&#x636; </h2>
+                                <p>
+                                    &#x642;&#x627;&#x644;&#x62A; &#x643;&#x648;&#x631;&#x64A;&#x627; &#x627;&#x644;&#x634;&#x645;&#x627;&#x644;&#x64A;&#x629; &#x627;&#x644;&#x62B;&#x644;&#x627;&#x62B;&#x627;&#x621; &#x625;&#x646;&#x647;&#x627; &#x645;&#x633;&#x62A;&#x639;&#x62F;&#x629; &#x644;&#x62A;&#x641;&#x62C;&#x64A;&#x631; &#x642;&#x646;&#x627;&#x628;&#x644; &#x647;&#x64A;&#x62F;&#x631;&#x648;&#x62C;&#x64A;&#x646;&#x64A;&#x629; &#x644;&#x645;&#x62D;&#x648; &#x627;&#x644;&#x648;&#x644;&#x627;&#x64A;&#x627;&#x62A; &#x627;&#x644;&#x645;&#x62A;&#x62D;&#x62F;&#x629; &#x645;&#x646; &#x627;&#x644;&#x648;&#x62C;&#x648;&#x62F; &quot;&#x645;&#x631;&#x629; &#x648;&#x627;&#x62D;&#x62F;&#x629;&quot; &#x62D;&#x633;&#x628; &#x645;&#x627; &#x646;&#x642;&#x644;&#x62A; &#x648;&#x643;&#x627;&#x644;&#x629; &#x64A;&#x648;&#x646;&#x647;&#x627;&#x628; &#x627;&#x644;&#x643;&#x648;&#x631;&#x64A;&#x629; &#x627;&#x644;&#x62C;&#x646;&#x648;&#x628;&#x64A;&#x629; &#x627;&#x644;&#x631;&#x633;&#x645;&#x64A;&#x629;.
+                                </p>
+                            </div>
+
+                            <div class="item">
+                                <h2>&#x645;&#x64A;&#x631;&#x643;&#x644; &#x628;&#x639;&#x62F; &#x627;&#x646;&#x641;&#x62C;&#x627;&#x631; &#x625;&#x633;&#x637;&#x646;&#x628;&#x648;&#x644;: &#x627;&#x644;&#x625;&#x631;&#x647;&#x627;&#x628;&#x64A;&#x648;&#x646; &#x623;&#x639;&#x62F;&#x627;&#x621; &#x643;&#x644; &#x627;&#x644;&#x628;&#x634;&#x631;  </h2>
+                                <p>
+                                    &#x623;&#x62F;&#x627;&#x646;&#x62A; &#x627;&#x644;&#x645;&#x633;&#x62A;&#x634;&#x627;&#x631;&#x629; &#x627;&#x644;&#x623;&#x644;&#x645;&#x627;&#x646;&#x64A;&#x629;&#x60C; &#x623;&#x646;&#x62C;&#x64A;&#x644;&#x627; &#x645;&#x64A;&#x631;&#x643;&#x644;&#x60C; &#x645;&#x62C;&#x62F;&#x62F;&#x627;&#x64B; &#x627;&#x644;&#x62A;&#x641;&#x62C;&#x64A;&#x631; &#x627;&#x644;&#x627;&#x646;&#x62A;&#x62D;&#x627;&#x631;&#x64A; &#x627;&#x644;&#x630;&#x64A; &#x648;&#x642;&#x639; &#x635;&#x628;&#x627;&#x62D; &#x627;&#x644;&#x64A;&#x648;&#x645; &#x627;&#x644;&#x62B;&#x644;&#x627;&#x62B;&#x627;&#x621;&#x60C; &#x641;&#x64A; &#x645;&#x62F;&#x64A;&#x646;&#x629; &#x625;&#x633;&#x637;&#x646;&#x628;&#x648;&#x644; &#x627;&#x644;&#x62A;&#x631;&#x643;&#x64A;&#x629;&#x60C; &#x648;&#x623;&#x633;&#x641;&#x631; &#x639;&#x646; &#x645;&#x642;&#x62A;&#x644; &#x62B;&#x645;&#x627;&#x646;&#x64A;&#x629; &#x623;&#x644;&#x645;&#x627;&#x646;&#x60C; &#x648;&#x648;&#x635;&#x641;&#x62A;&#x647; &#x628;&#x623;&#x646;&#x647; &quot;&#x639;&#x645;&#x644; ...
+                                </p>
+                            </div>
+                            <div class="item">
+                                <h2>&#x643;&#x648;&#x631;&#x64A;&#x627; &#x627;&#x644;&#x634;&#x645;&#x627;&#x644;&#x64A;&#x629; &#x62A;&#x64F;&#x647;&#x62F;&#x62F; &#x628;&#x645;&#x62D;&#x648; &#x627;&#x644;&#x648;&#x644;&#x627;&#x64A;&#x627;&#x62A; &#x627;&#x644;&#x645;&#x62A;&#x62D;&#x62F;&#x629; &#x645;&#x646; &#x639;&#x644;&#x649; &#x648;&#x62C;&#x647; &#x627;&#x644;&#x623;&#x631;&#x636; </h2>
+                                <p>
+                                    &#x642;&#x627;&#x644;&#x62A; &#x643;&#x648;&#x631;&#x64A;&#x627; &#x627;&#x644;&#x634;&#x645;&#x627;&#x644;&#x64A;&#x629; &#x627;&#x644;&#x62B;&#x644;&#x627;&#x62B;&#x627;&#x621; &#x625;&#x646;&#x647;&#x627; &#x645;&#x633;&#x62A;&#x639;&#x62F;&#x629; &#x644;&#x62A;&#x641;&#x62C;&#x64A;&#x631; &#x642;&#x646;&#x627;&#x628;&#x644; &#x647;&#x64A;&#x62F;&#x631;&#x648;&#x62C;&#x64A;&#x646;&#x64A;&#x629; &#x644;&#x645;&#x62D;&#x648; &#x627;&#x644;&#x648;&#x644;&#x627;&#x64A;&#x627;&#x62A; &#x627;&#x644;&#x645;&#x62A;&#x62D;&#x62F;&#x629; &#x645;&#x646; &#x627;&#x644;&#x648;&#x62C;&#x648;&#x62F; &quot;&#x645;&#x631;&#x629; &#x648;&#x627;&#x62D;&#x62F;&#x629;&quot; &#x62D;&#x633;&#x628; &#x645;&#x627; &#x646;&#x642;&#x644;&#x62A; &#x648;&#x643;&#x627;&#x644;&#x629; &#x64A;&#x648;&#x646;&#x647;&#x627;&#x628; &#x627;&#x644;&#x643;&#x648;&#x631;&#x64A;&#x629; &#x627;&#x644;&#x62C;&#x646;&#x648;&#x628;&#x64A;&#x629; &#x627;&#x644;&#x631;&#x633;&#x645;&#x64A;&#x629;.
+                                </p>
+                            </div>
+
+                            <div class="item">
+                                <h2>&#x645;&#x64A;&#x631;&#x643;&#x644; &#x628;&#x639;&#x62F; &#x627;&#x646;&#x641;&#x62C;&#x627;&#x631; &#x625;&#x633;&#x637;&#x646;&#x628;&#x648;&#x644;: &#x627;&#x644;&#x625;&#x631;&#x647;&#x627;&#x628;&#x64A;&#x648;&#x646; &#x623;&#x639;&#x62F;&#x627;&#x621; &#x643;&#x644; &#x627;&#x644;&#x628;&#x634;&#x631;  </h2>
+                                <p>
+                                    &#x623;&#x62F;&#x627;&#x646;&#x62A; &#x627;&#x644;&#x645;&#x633;&#x62A;&#x634;&#x627;&#x631;&#x629; &#x627;&#x644;&#x623;&#x644;&#x645;&#x627;&#x646;&#x64A;&#x629;&#x60C; &#x623;&#x646;&#x62C;&#x64A;&#x644;&#x627; &#x645;&#x64A;&#x631;&#x643;&#x644;&#x60C; &#x645;&#x62C;&#x62F;&#x62F;&#x627;&#x64B; &#x627;&#x644;&#x62A;&#x641;&#x62C;&#x64A;&#x631; &#x627;&#x644;&#x627;&#x646;&#x62A;&#x62D;&#x627;&#x631;&#x64A; &#x627;&#x644;&#x630;&#x64A; &#x648;&#x642;&#x639; &#x635;&#x628;&#x627;&#x62D; &#x627;&#x644;&#x64A;&#x648;&#x645; &#x627;&#x644;&#x62B;&#x644;&#x627;&#x62B;&#x627;&#x621;&#x60C; &#x641;&#x64A; &#x645;&#x62F;&#x64A;&#x646;&#x629; &#x625;&#x633;&#x637;&#x646;&#x628;&#x648;&#x644; &#x627;&#x644;&#x62A;&#x631;&#x643;&#x64A;&#x629;&#x60C; &#x648;&#x623;&#x633;&#x641;&#x631; &#x639;&#x646; &#x645;&#x642;&#x62A;&#x644; &#x62B;&#x645;&#x627;&#x646;&#x64A;&#x629; &#x623;&#x644;&#x645;&#x627;&#x646;&#x60C; &#x648;&#x648;&#x635;&#x641;&#x62A;&#x647; &#x628;&#x623;&#x646;&#x647; &quot;&#x639;&#x645;&#x644; ...
+                                </p>
+                            </div>
+                            <div class="item">
+                                <h2>&#x643;&#x648;&#x631;&#x64A;&#x627; &#x627;&#x644;&#x634;&#x645;&#x627;&#x644;&#x64A;&#x629; &#x62A;&#x64F;&#x647;&#x62F;&#x62F; &#x628;&#x645;&#x62D;&#x648; &#x627;&#x644;&#x648;&#x644;&#x627;&#x64A;&#x627;&#x62A; &#x627;&#x644;&#x645;&#x62A;&#x62D;&#x62F;&#x629; &#x645;&#x646; &#x639;&#x644;&#x649; &#x648;&#x62C;&#x647; &#x627;&#x644;&#x623;&#x631;&#x636; </h2>
+                                <p>
+                                    &#x642;&#x627;&#x644;&#x62A; &#x643;&#x648;&#x631;&#x64A;&#x627; &#x627;&#x644;&#x634;&#x645;&#x627;&#x644;&#x64A;&#x629; &#x627;&#x644;&#x62B;&#x644;&#x627;&#x62B;&#x627;&#x621; &#x625;&#x646;&#x647;&#x627; &#x645;&#x633;&#x62A;&#x639;&#x62F;&#x629; &#x644;&#x62A;&#x641;&#x62C;&#x64A;&#x631; &#x642;&#x646;&#x627;&#x628;&#x644; &#x647;&#x64A;&#x62F;&#x631;&#x648;&#x62C;&#x64A;&#x646;&#x64A;&#x629; &#x644;&#x645;&#x62D;&#x648; &#x627;&#x644;&#x648;&#x644;&#x627;&#x64A;&#x627;&#x62A; &#x627;&#x644;&#x645;&#x62A;&#x62D;&#x62F;&#x629; &#x645;&#x646; &#x627;&#x644;&#x648;&#x62C;&#x648;&#x62F; &quot;&#x645;&#x631;&#x629; &#x648;&#x627;&#x62D;&#x62F;&#x629;&quot; &#x62D;&#x633;&#x628; &#x645;&#x627; &#x646;&#x642;&#x644;&#x62A; &#x648;&#x643;&#x627;&#x644;&#x629; &#x64A;&#x648;&#x646;&#x647;&#x627;&#x628; &#x627;&#x644;&#x643;&#x648;&#x631;&#x64A;&#x629; &#x627;&#x644;&#x62C;&#x646;&#x648;&#x628;&#x64A;&#x629; &#x627;&#x644;&#x631;&#x633;&#x645;&#x64A;&#x629;.
+                                </p>
+                            </div>
+
+                            <div class="item">
+                                <h2>&#x645;&#x64A;&#x631;&#x643;&#x644; &#x628;&#x639;&#x62F; &#x627;&#x646;&#x641;&#x62C;&#x627;&#x631; &#x625;&#x633;&#x637;&#x646;&#x628;&#x648;&#x644;: &#x627;&#x644;&#x625;&#x631;&#x647;&#x627;&#x628;&#x64A;&#x648;&#x646; &#x623;&#x639;&#x62F;&#x627;&#x621; &#x643;&#x644; &#x627;&#x644;&#x628;&#x634;&#x631;  </h2>
+                                <p>
+                                    &#x623;&#x62F;&#x627;&#x646;&#x62A; &#x627;&#x644;&#x645;&#x633;&#x62A;&#x634;&#x627;&#x631;&#x629; &#x627;&#x644;&#x623;&#x644;&#x645;&#x627;&#x646;&#x64A;&#x629;&#x60C; &#x623;&#x646;&#x62C;&#x64A;&#x644;&#x627; &#x645;&#x64A;&#x631;&#x643;&#x644;&#x60C; &#x645;&#x62C;&#x62F;&#x62F;&#x627;&#x64B; &#x627;&#x644;&#x62A;&#x641;&#x62C;&#x64A;&#x631; &#x627;&#x644;&#x627;&#x646;&#x62A;&#x62D;&#x627;&#x631;&#x64A; &#x627;&#x644;&#x630;&#x64A; &#x648;&#x642;&#x639; &#x635;&#x628;&#x627;&#x62D; &#x627;&#x644;&#x64A;&#x648;&#x645; &#x627;&#x644;&#x62B;&#x644;&#x627;&#x62B;&#x627;&#x621;&#x60C; &#x641;&#x64A; &#x645;&#x62F;&#x64A;&#x646;&#x629; &#x625;&#x633;&#x637;&#x646;&#x628;&#x648;&#x644; &#x627;&#x644;&#x62A;&#x631;&#x643;&#x64A;&#x629;&#x60C; &#x648;&#x623;&#x633;&#x641;&#x631; &#x639;&#x646; &#x645;&#x642;&#x62A;&#x644; &#x62B;&#x645;&#x627;&#x646;&#x64A;&#x629; &#x623;&#x644;&#x645;&#x627;&#x646;&#x60C; &#x648;&#x648;&#x635;&#x641;&#x62A;&#x647; &#x628;&#x623;&#x646;&#x647; &quot;&#x639;&#x645;&#x644; ...
+                                </p>
+                            </div>
+                            <div class="item">
+                                <h2>&#x643;&#x648;&#x631;&#x64A;&#x627; &#x627;&#x644;&#x634;&#x645;&#x627;&#x644;&#x64A;&#x629; &#x62A;&#x64F;&#x647;&#x62F;&#x62F; &#x628;&#x645;&#x62D;&#x648; &#x627;&#x644;&#x648;&#x644;&#x627;&#x64A;&#x627;&#x62A; &#x627;&#x644;&#x645;&#x62A;&#x62D;&#x62F;&#x629; &#x645;&#x646; &#x639;&#x644;&#x649; &#x648;&#x62C;&#x647; &#x627;&#x644;&#x623;&#x631;&#x636; </h2>
+                                <p>
+                                    &#x642;&#x627;&#x644;&#x62A; &#x643;&#x648;&#x631;&#x64A;&#x627; &#x627;&#x644;&#x634;&#x645;&#x627;&#x644;&#x64A;&#x629; &#x627;&#x644;&#x62B;&#x644;&#x627;&#x62B;&#x627;&#x621; &#x625;&#x646;&#x647;&#x627; &#x645;&#x633;&#x62A;&#x639;&#x62F;&#x629; &#x644;&#x62A;&#x641;&#x62C;&#x64A;&#x631; &#x642;&#x646;&#x627;&#x628;&#x644; &#x647;&#x64A;&#x62F;&#x631;&#x648;&#x62C;&#x64A;&#x646;&#x64A;&#x629; &#x644;&#x645;&#x62D;&#x648; &#x627;&#x644;&#x648;&#x644;&#x627;&#x64A;&#x627;&#x62A; &#x627;&#x644;&#x645;&#x62A;&#x62D;&#x62F;&#x629; &#x645;&#x646; &#x627;&#x644;&#x648;&#x62C;&#x648;&#x62F; &quot;&#x645;&#x631;&#x629; &#x648;&#x627;&#x62D;&#x62F;&#x629;&quot; &#x62D;&#x633;&#x628; &#x645;&#x627; &#x646;&#x642;&#x644;&#x62A; &#x648;&#x643;&#x627;&#x644;&#x629; &#x64A;&#x648;&#x646;&#x647;&#x627;&#x628; &#x627;&#x644;&#x643;&#x648;&#x631;&#x64A;&#x629; &#x627;&#x644;&#x62C;&#x646;&#x648;&#x628;&#x64A;&#x629; &#x627;&#x644;&#x631;&#x633;&#x645;&#x64A;&#x629;.
+                                </p>
+                            </div>
+
+                            <div class="item">
+                                <h2>&#x645;&#x64A;&#x631;&#x643;&#x644; &#x628;&#x639;&#x62F; &#x627;&#x646;&#x641;&#x62C;&#x627;&#x631; &#x625;&#x633;&#x637;&#x646;&#x628;&#x648;&#x644;: &#x627;&#x644;&#x625;&#x631;&#x647;&#x627;&#x628;&#x64A;&#x648;&#x646; &#x623;&#x639;&#x62F;&#x627;&#x621; &#x643;&#x644; &#x627;&#x644;&#x628;&#x634;&#x631;  </h2>
+                                <p>
+                                    &#x623;&#x62F;&#x627;&#x646;&#x62A; &#x627;&#x644;&#x645;&#x633;&#x62A;&#x634;&#x627;&#x631;&#x629; &#x627;&#x644;&#x623;&#x644;&#x645;&#x627;&#x646;&#x64A;&#x629;&#x60C; &#x623;&#x646;&#x62C;&#x64A;&#x644;&#x627; &#x645;&#x64A;&#x631;&#x643;&#x644;&#x60C; &#x645;&#x62C;&#x62F;&#x62F;&#x627;&#x64B; &#x627;&#x644;&#x62A;&#x641;&#x62C;&#x64A;&#x631; &#x627;&#x644;&#x627;&#x646;&#x62A;&#x62D;&#x627;&#x631;&#x64A; &#x627;&#x644;&#x630;&#x64A; &#x648;&#x642;&#x639; &#x635;&#x628;&#x627;&#x62D; &#x627;&#x644;&#x64A;&#x648;&#x645; &#x627;&#x644;&#x62B;&#x644;&#x627;&#x62B;&#x627;&#x621;&#x60C; &#x641;&#x64A; &#x645;&#x62F;&#x64A;&#x646;&#x629; &#x625;&#x633;&#x637;&#x646;&#x628;&#x648;&#x644; &#x627;&#x644;&#x62A;&#x631;&#x643;&#x64A;&#x629;&#x60C; &#x648;&#x623;&#x633;&#x641;&#x631; &#x639;&#x646; &#x645;&#x642;&#x62A;&#x644; &#x62B;&#x645;&#x627;&#x646;&#x64A;&#x629; &#x623;&#x644;&#x645;&#x627;&#x646;&#x60C; &#x648;&#x648;&#x635;&#x641;&#x62A;&#x647; &#x628;&#x623;&#x646;&#x647; &quot;&#x639;&#x645;&#x644; ...
+                                </p>
+                            </div>
+                        </ion-item>
+                    </ion-list>
+
+                </ion-content>
+            </ion-view>
+
+        </div> <!-- #tab-content3 -->
+
+        <div id="tab-content4" class="tab-content">
+
+            <ion-view view-title="Main">
+                <ion-content class="padding">
+                    <ion-list>
+                        <h3 class="item">&#x627;&#x644;&#x641;&#x64A;&#x62F;&#x64A;&#x648;</h3>
+                        <ion-item>
+                            <div class="item">
+                                <h2>&#x643;&#x648;&#x631;&#x64A;&#x627; &#x627;&#x644;&#x634;&#x645;&#x627;&#x644;&#x64A;&#x629; &#x62A;&#x64F;&#x647;&#x62F;&#x62F; &#x628;&#x645;&#x62D;&#x648; &#x627;&#x644;&#x648;&#x644;&#x627;&#x64A;&#x627;&#x62A; &#x627;&#x644;&#x645;&#x62A;&#x62D;&#x62F;&#x629; &#x645;&#x646; &#x639;&#x644;&#x649; &#x648;&#x62C;&#x647; &#x627;&#x644;&#x623;&#x631;&#x636; </h2>
+                                <p>
+                                    &#x642;&#x627;&#x644;&#x62A; &#x643;&#x648;&#x631;&#x64A;&#x627; &#x627;&#x644;&#x634;&#x645;&#x627;&#x644;&#x64A;&#x629; &#x627;&#x644;&#x62B;&#x644;&#x627;&#x62B;&#x627;&#x621; &#x625;&#x646;&#x647;&#x627; &#x645;&#x633;&#x62A;&#x639;&#x62F;&#x629; &#x644;&#x62A;&#x641;&#x62C;&#x64A;&#x631; &#x642;&#x646;&#x627;&#x628;&#x644; &#x647;&#x64A;&#x62F;&#x631;&#x648;&#x62C;&#x64A;&#x646;&#x64A;&#x629; &#x644;&#x645;&#x62D;&#x648; &#x627;&#x644;&#x648;&#x644;&#x627;&#x64A;&#x627;&#x62A; &#x627;&#x644;&#x645;&#x62A;&#x62D;&#x62F;&#x629; &#x645;&#x646; &#x627;&#x644;&#x648;&#x62C;&#x648;&#x62F; &quot;&#x645;&#x631;&#x629; &#x648;&#x627;&#x62D;&#x62F;&#x629;&quot; &#x62D;&#x633;&#x628; &#x645;&#x627; &#x646;&#x642;&#x644;&#x62A; &#x648;&#x643;&#x627;&#x644;&#x629; &#x64A;&#x648;&#x646;&#x647;&#x627;&#x628; &#x627;&#x644;&#x643;&#x648;&#x631;&#x64A;&#x629; &#x627;&#x644;&#x62C;&#x646;&#x648;&#x628;&#x64A;&#x629; &#x627;&#x644;&#x631;&#x633;&#x645;&#x64A;&#x629;.
+                                </p>
+                            </div>
+
+                            <div class="item">
+                                <h2>&#x645;&#x64A;&#x631;&#x643;&#x644; &#x628;&#x639;&#x62F; &#x627;&#x646;&#x641;&#x62C;&#x627;&#x631; &#x625;&#x633;&#x637;&#x646;&#x628;&#x648;&#x644;: &#x627;&#x644;&#x625;&#x631;&#x647;&#x627;&#x628;&#x64A;&#x648;&#x646; &#x623;&#x639;&#x62F;&#x627;&#x621; &#x643;&#x644; &#x627;&#x644;&#x628;&#x634;&#x631;  </h2>
+                                <p>
+                                    &#x623;&#x62F;&#x627;&#x646;&#x62A; &#x627;&#x644;&#x645;&#x633;&#x62A;&#x634;&#x627;&#x631;&#x629; &#x627;&#x644;&#x623;&#x644;&#x645;&#x627;&#x646;&#x64A;&#x629;&#x60C; &#x623;&#x646;&#x62C;&#x64A;&#x644;&#x627; &#x645;&#x64A;&#x631;&#x643;&#x644;&#x60C; &#x645;&#x62C;&#x62F;&#x62F;&#x627;&#x64B; &#x627;&#x644;&#x62A;&#x641;&#x62C;&#x64A;&#x631; &#x627;&#x644;&#x627;&#x646;&#x62A;&#x62D;&#x627;&#x631;&#x64A; &#x627;&#x644;&#x630;&#x64A; &#x648;&#x642;&#x639; &#x635;&#x628;&#x627;&#x62D; &#x627;&#x644;&#x64A;&#x648;&#x645; &#x627;&#x644;&#x62B;&#x644;&#x627;&#x62B;&#x627;&#x621;&#x60C; &#x641;&#x64A; &#x645;&#x62F;&#x64A;&#x646;&#x629; &#x625;&#x633;&#x637;&#x646;&#x628;&#x648;&#x644; &#x627;&#x644;&#x62A;&#x631;&#x643;&#x64A;&#x629;&#x60C; &#x648;&#x623;&#x633;&#x641;&#x631; &#x639;&#x646; &#x645;&#x642;&#x62A;&#x644; &#x62B;&#x645;&#x627;&#x646;&#x64A;&#x629; &#x623;&#x644;&#x645;&#x627;&#x646;&#x60C; &#x648;&#x648;&#x635;&#x641;&#x62A;&#x647; &#x628;&#x623;&#x646;&#x647; &quot;&#x639;&#x645;&#x644; ...
+                                </p>
+                            </div>
+                            <div class="item">
+                                <h2>&#x643;&#x648;&#x631;&#x64A;&#x627; &#x627;&#x644;&#x634;&#x645;&#x627;&#x644;&#x64A;&#x629; &#x62A;&#x64F;&#x647;&#x62F;&#x62F; &#x628;&#x645;&#x62D;&#x648; &#x627;&#x644;&#x648;&#x644;&#x627;&#x64A;&#x627;&#x62A; &#x627;&#x644;&#x645;&#x62A;&#x62D;&#x62F;&#x629; &#x645;&#x646; &#x639;&#x644;&#x649; &#x648;&#x62C;&#x647; &#x627;&#x644;&#x623;&#x631;&#x636; </h2>
+                                <p>
+                                    &#x642;&#x627;&#x644;&#x62A; &#x643;&#x648;&#x631;&#x64A;&#x627; &#x627;&#x644;&#x634;&#x645;&#x627;&#x644;&#x64A;&#x629; &#x627;&#x644;&#x62B;&#x644;&#x627;&#x62B;&#x627;&#x621; &#x625;&#x646;&#x647;&#x627; &#x645;&#x633;&#x62A;&#x639;&#x62F;&#x629; &#x644;&#x62A;&#x641;&#x62C;&#x64A;&#x631; &#x642;&#x646;&#x627;&#x628;&#x644; &#x647;&#x64A;&#x62F;&#x631;&#x648;&#x62C;&#x64A;&#x646;&#x64A;&#x629; &#x644;&#x645;&#x62D;&#x648; &#x627;&#x644;&#x648;&#x644;&#x627;&#x64A;&#x627;&#x62A; &#x627;&#x644;&#x645;&#x62A;&#x62D;&#x62F;&#x629; &#x645;&#x646; &#x627;&#x644;&#x648;&#x62C;&#x648;&#x62F; &quot;&#x645;&#x631;&#x629; &#x648;&#x627;&#x62D;&#x62F;&#x629;&quot; &#x62D;&#x633;&#x628; &#x645;&#x627; &#x646;&#x642;&#x644;&#x62A; &#x648;&#x643;&#x627;&#x644;&#x629; &#x64A;&#x648;&#x646;&#x647;&#x627;&#x628; &#x627;&#x644;&#x643;&#x648;&#x631;&#x64A;&#x629; &#x627;&#x644;&#x62C;&#x646;&#x648;&#x628;&#x64A;&#x629; &#x627;&#x644;&#x631;&#x633;&#x645;&#x64A;&#x629;.
+                                </p>
+                            </div>
+
+                            <div class="item">
+                                <h2>&#x645;&#x64A;&#x631;&#x643;&#x644; &#x628;&#x639;&#x62F; &#x627;&#x646;&#x641;&#x62C;&#x627;&#x631; &#x625;&#x633;&#x637;&#x646;&#x628;&#x648;&#x644;: &#x627;&#x644;&#x625;&#x631;&#x647;&#x627;&#x628;&#x64A;&#x648;&#x646; &#x623;&#x639;&#x62F;&#x627;&#x621; &#x643;&#x644; &#x627;&#x644;&#x628;&#x634;&#x631;  </h2>
+                                <p>
+                                    &#x623;&#x62F;&#x627;&#x646;&#x62A; &#x627;&#x644;&#x645;&#x633;&#x62A;&#x634;&#x627;&#x631;&#x629; &#x627;&#x644;&#x623;&#x644;&#x645;&#x627;&#x646;&#x64A;&#x629;&#x60C; &#x623;&#x646;&#x62C;&#x64A;&#x644;&#x627; &#x645;&#x64A;&#x631;&#x643;&#x644;&#x60C; &#x645;&#x62C;&#x62F;&#x62F;&#x627;&#x64B; &#x627;&#x644;&#x62A;&#x641;&#x62C;&#x64A;&#x631; &#x627;&#x644;&#x627;&#x646;&#x62A;&#x62D;&#x627;&#x631;&#x64A; &#x627;&#x644;&#x630;&#x64A; &#x648;&#x642;&#x639; &#x635;&#x628;&#x627;&#x62D; &#x627;&#x644;&#x64A;&#x648;&#x645; &#x627;&#x644;&#x62B;&#x644;&#x627;&#x62B;&#x627;&#x621;&#x60C; &#x641;&#x64A; &#x645;&#x62F;&#x64A;&#x646;&#x629; &#x625;&#x633;&#x637;&#x646;&#x628;&#x648;&#x644; &#x627;&#x644;&#x62A;&#x631;&#x643;&#x64A;&#x629;&#x60C; &#x648;&#x623;&#x633;&#x641;&#x631; &#x639;&#x646; &#x645;&#x642;&#x62A;&#x644; &#x62B;&#x645;&#x627;&#x646;&#x64A;&#x629; &#x623;&#x644;&#x645;&#x627;&#x646;&#x60C; &#x648;&#x648;&#x635;&#x641;&#x62A;&#x647; &#x628;&#x623;&#x646;&#x647; &quot;&#x639;&#x645;&#x644; ...
+                                </p>
+                            </div>
+                            <div class="item">
+                                <h2>&#x643;&#x648;&#x631;&#x64A;&#x627; &#x627;&#x644;&#x634;&#x645;&#x627;&#x644;&#x64A;&#x629; &#x62A;&#x64F;&#x647;&#x62F;&#x62F; &#x628;&#x645;&#x62D;&#x648; &#x627;&#x644;&#x648;&#x644;&#x627;&#x64A;&#x627;&#x62A; &#x627;&#x644;&#x645;&#x62A;&#x62D;&#x62F;&#x629; &#x645;&#x646; &#x639;&#x644;&#x649; &#x648;&#x62C;&#x647; &#x627;&#x644;&#x623;&#x631;&#x636; </h2>
+                                <p>
+                                    &#x642;&#x627;&#x644;&#x62A; &#x643;&#x648;&#x631;&#x64A;&#x627; &#x627;&#x644;&#x634;&#x645;&#x627;&#x644;&#x64A;&#x629; &#x627;&#x644;&#x62B;&#x644;&#x627;&#x62B;&#x627;&#x621; &#x625;&#x646;&#x647;&#x627; &#x645;&#x633;&#x62A;&#x639;&#x62F;&#x629; &#x644;&#x62A;&#x641;&#x62C;&#x64A;&#x631; &#x642;&#x646;&#x627;&#x628;&#x644; &#x647;&#x64A;&#x62F;&#x631;&#x648;&#x62C;&#x64A;&#x646;&#x64A;&#x629; &#x644;&#x645;&#x62D;&#x648; &#x627;&#x644;&#x648;&#x644;&#x627;&#x64A;&#x627;&#x62A; &#x627;&#x644;&#x645;&#x62A;&#x62D;&#x62F;&#x629; &#x645;&#x646; &#x627;&#x644;&#x648;&#x62C;&#x648;&#x62F; &quot;&#x645;&#x631;&#x629; &#x648;&#x627;&#x62D;&#x62F;&#x629;&quot; &#x62D;&#x633;&#x628; &#x645;&#x627; &#x646;&#x642;&#x644;&#x62A; &#x648;&#x643;&#x627;&#x644;&#x629; &#x64A;&#x648;&#x646;&#x647;&#x627;&#x628; &#x627;&#x644;&#x643;&#x648;&#x631;&#x64A;&#x629; &#x627;&#x644;&#x62C;&#x646;&#x648;&#x628;&#x64A;&#x629; &#x627;&#x644;&#x631;&#x633;&#x645;&#x64A;&#x629;.
+                                </p>
+                            </div>
+
+                            <div class="item">
+                                <h2>&#x645;&#x64A;&#x631;&#x643;&#x644; &#x628;&#x639;&#x62F; &#x627;&#x646;&#x641;&#x62C;&#x627;&#x631; &#x625;&#x633;&#x637;&#x646;&#x628;&#x648;&#x644;: &#x627;&#x644;&#x625;&#x631;&#x647;&#x627;&#x628;&#x64A;&#x648;&#x646; &#x623;&#x639;&#x62F;&#x627;&#x621; &#x643;&#x644; &#x627;&#x644;&#x628;&#x634;&#x631;  </h2>
+                                <p>
+                                    &#x623;&#x62F;&#x627;&#x646;&#x62A; &#x627;&#x644;&#x645;&#x633;&#x62A;&#x634;&#x627;&#x631;&#x629; &#x627;&#x644;&#x623;&#x644;&#x645;&#x627;&#x646;&#x64A;&#x629;&#x60C; &#x623;&#x646;&#x62C;&#x64A;&#x644;&#x627; &#x645;&#x64A;&#x631;&#x643;&#x644;&#x60C; &#x645;&#x62C;&#x62F;&#x62F;&#x627;&#x64B; &#x627;&#x644;&#x62A;&#x641;&#x62C;&#x64A;&#x631; &#x627;&#x644;&#x627;&#x646;&#x62A;&#x62D;&#x627;&#x631;&#x64A; &#x627;&#x644;&#x630;&#x64A; &#x648;&#x642;&#x639; &#x635;&#x628;&#x627;&#x62D; &#x627;&#x644;&#x64A;&#x648;&#x645; &#x627;&#x644;&#x62B;&#x644;&#x627;&#x62B;&#x627;&#x621;&#x60C; &#x641;&#x64A; &#x645;&#x62F;&#x64A;&#x646;&#x629; &#x625;&#x633;&#x637;&#x646;&#x628;&#x648;&#x644; &#x627;&#x644;&#x62A;&#x631;&#x643;&#x64A;&#x629;&#x60C; &#x648;&#x623;&#x633;&#x641;&#x631; &#x639;&#x646; &#x645;&#x642;&#x62A;&#x644; &#x62B;&#x645;&#x627;&#x646;&#x64A;&#x629; &#x623;&#x644;&#x645;&#x627;&#x646;&#x60C; &#x648;&#x648;&#x635;&#x641;&#x62A;&#x647; &#x628;&#x623;&#x646;&#x647; &quot;&#x639;&#x645;&#x644; ...
+                                </p>
+                            </div>
+                            <div class="item">
+                                <h2>&#x643;&#x648;&#x631;&#x64A;&#x627; &#x627;&#x644;&#x634;&#x645;&#x627;&#x644;&#x64A;&#x629; &#x62A;&#x64F;&#x647;&#x62F;&#x62F; &#x628;&#x645;&#x62D;&#x648; &#x627;&#x644;&#x648;&#x644;&#x627;&#x64A;&#x627;&#x62A; &#x627;&#x644;&#x645;&#x62A;&#x62D;&#x62F;&#x629; &#x645;&#x646; &#x639;&#x644;&#x649; &#x648;&#x62C;&#x647; &#x627;&#x644;&#x623;&#x631;&#x636; </h2>
+                                <p>
+                                    &#x642;&#x627;&#x644;&#x62A; &#x643;&#x648;&#x631;&#x64A;&#x627; &#x627;&#x644;&#x634;&#x645;&#x627;&#x644;&#x64A;&#x629; &#x627;&#x644;&#x62B;&#x644;&#x627;&#x62B;&#x627;&#x621; &#x625;&#x646;&#x647;&#x627; &#x645;&#x633;&#x62A;&#x639;&#x62F;&#x629; &#x644;&#x62A;&#x641;&#x62C;&#x64A;&#x631; &#x642;&#x646;&#x627;&#x628;&#x644; &#x647;&#x64A;&#x62F;&#x631;&#x648;&#x62C;&#x64A;&#x646;&#x64A;&#x629; &#x644;&#x645;&#x62D;&#x648; &#x627;&#x644;&#x648;&#x644;&#x627;&#x64A;&#x627;&#x62A; &#x627;&#x644;&#x645;&#x62A;&#x62D;&#x62F;&#x629; &#x645;&#x646; &#x627;&#x644;&#x648;&#x62C;&#x648;&#x62F; &quot;&#x645;&#x631;&#x629; &#x648;&#x627;&#x62D;&#x62F;&#x629;&quot; &#x62D;&#x633;&#x628; &#x645;&#x627; &#x646;&#x642;&#x644;&#x62A; &#x648;&#x643;&#x627;&#x644;&#x629; &#x64A;&#x648;&#x646;&#x647;&#x627;&#x628; &#x627;&#x644;&#x643;&#x648;&#x631;&#x64A;&#x629; &#x627;&#x644;&#x62C;&#x646;&#x648;&#x628;&#x64A;&#x629; &#x627;&#x644;&#x631;&#x633;&#x645;&#x64A;&#x629;.
+                                </p>
+                            </div>
+
+                            <div class="item">
+                                <h2>&#x645;&#x64A;&#x631;&#x643;&#x644; &#x628;&#x639;&#x62F; &#x627;&#x646;&#x641;&#x62C;&#x627;&#x631; &#x625;&#x633;&#x637;&#x646;&#x628;&#x648;&#x644;: &#x627;&#x644;&#x625;&#x631;&#x647;&#x627;&#x628;&#x64A;&#x648;&#x646; &#x623;&#x639;&#x62F;&#x627;&#x621; &#x643;&#x644; &#x627;&#x644;&#x628;&#x634;&#x631;  </h2>
+                                <p>
+                                    &#x623;&#x62F;&#x627;&#x646;&#x62A; &#x627;&#x644;&#x645;&#x633;&#x62A;&#x634;&#x627;&#x631;&#x629; &#x627;&#x644;&#x623;&#x644;&#x645;&#x627;&#x646;&#x64A;&#x629;&#x60C; &#x623;&#x646;&#x62C;&#x64A;&#x644;&#x627; &#x645;&#x64A;&#x631;&#x643;&#x644;&#x60C; &#x645;&#x62C;&#x62F;&#x62F;&#x627;&#x64B; &#x627;&#x644;&#x62A;&#x641;&#x62C;&#x64A;&#x631; &#x627;&#x644;&#x627;&#x646;&#x62A;&#x62D;&#x627;&#x631;&#x64A; &#x627;&#x644;&#x630;&#x64A; &#x648;&#x642;&#x639; &#x635;&#x628;&#x627;&#x62D; &#x627;&#x644;&#x64A;&#x648;&#x645; &#x627;&#x644;&#x62B;&#x644;&#x627;&#x62B;&#x627;&#x621;&#x60C; &#x641;&#x64A; &#x645;&#x62F;&#x64A;&#x646;&#x629; &#x625;&#x633;&#x637;&#x646;&#x628;&#x648;&#x644; &#x627;&#x644;&#x62A;&#x631;&#x643;&#x64A;&#x629;&#x60C; &#x648;&#x623;&#x633;&#x641;&#x631; &#x639;&#x646; &#x645;&#x642;&#x62A;&#x644; &#x62B;&#x645;&#x627;&#x646;&#x64A;&#x629; &#x623;&#x644;&#x645;&#x627;&#x646;&#x60C; &#x648;&#x648;&#x635;&#x641;&#x62A;&#x647; &#x628;&#x623;&#x646;&#x647; &quot;&#x639;&#x645;&#x644; ...
+                                </p>
+                            </div>
+                            <div class="item">
+                                <h2>&#x643;&#x648;&#x631;&#x64A;&#x627; &#x627;&#x644;&#x634;&#x645;&#x627;&#x644;&#x64A;&#x629; &#x62A;&#x64F;&#x647;&#x62F;&#x62F; &#x628;&#x645;&#x62D;&#x648; &#x627;&#x644;&#x648;&#x644;&#x627;&#x64A;&#x627;&#x62A; &#x627;&#x644;&#x645;&#x62A;&#x62D;&#x62F;&#x629; &#x645;&#x646; &#x639;&#x644;&#x649; &#x648;&#x62C;&#x647; &#x627;&#x644;&#x623;&#x631;&#x636; </h2>
+                                <p>
+                                    &#x642;&#x627;&#x644;&#x62A; &#x643;&#x648;&#x631;&#x64A;&#x627; &#x627;&#x644;&#x634;&#x645;&#x627;&#x644;&#x64A;&#x629; &#x627;&#x644;&#x62B;&#x644;&#x627;&#x62B;&#x627;&#x621; &#x625;&#x646;&#x647;&#x627; &#x645;&#x633;&#x62A;&#x639;&#x62F;&#x629; &#x644;&#x62A;&#x641;&#x62C;&#x64A;&#x631; &#x642;&#x646;&#x627;&#x628;&#x644; &#x647;&#x64A;&#x62F;&#x631;&#x648;&#x62C;&#x64A;&#x646;&#x64A;&#x629; &#x644;&#x645;&#x62D;&#x648; &#x627;&#x644;&#x648;&#x644;&#x627;&#x64A;&#x627;&#x62A; &#x627;&#x644;&#x645;&#x62A;&#x62D;&#x62F;&#x629; &#x645;&#x646; &#x627;&#x644;&#x648;&#x62C;&#x648;&#x62F; &quot;&#x645;&#x631;&#x629; &#x648;&#x627;&#x62D;&#x62F;&#x629;&quot; &#x62D;&#x633;&#x628; &#x645;&#x627; &#x646;&#x642;&#x644;&#x62A; &#x648;&#x643;&#x627;&#x644;&#x629; &#x64A;&#x648;&#x646;&#x647;&#x627;&#x628; &#x627;&#x644;&#x643;&#x648;&#x631;&#x64A;&#x629; &#x627;&#x644;&#x62C;&#x646;&#x648;&#x628;&#x64A;&#x629; &#x627;&#x644;&#x631;&#x633;&#x645;&#x64A;&#x629;.
+                                </p>
+                            </div>
+
+                            <div class="item">
+                                <h2>&#x645;&#x64A;&#x631;&#x643;&#x644; &#x628;&#x639;&#x62F; &#x627;&#x646;&#x641;&#x62C;&#x627;&#x631; &#x625;&#x633;&#x637;&#x646;&#x628;&#x648;&#x644;: &#x627;&#x644;&#x625;&#x631;&#x647;&#x627;&#x628;&#x64A;&#x648;&#x646; &#x623;&#x639;&#x62F;&#x627;&#x621; &#x643;&#x644; &#x627;&#x644;&#x628;&#x634;&#x631;  </h2>
+                                <p>
+                                    &#x623;&#x62F;&#x627;&#x646;&#x62A; &#x627;&#x644;&#x645;&#x633;&#x62A;&#x634;&#x627;&#x631;&#x629; &#x627;&#x644;&#x623;&#x644;&#x645;&#x627;&#x646;&#x64A;&#x629;&#x60C; &#x623;&#x646;&#x62C;&#x64A;&#x644;&#x627; &#x645;&#x64A;&#x631;&#x643;&#x644;&#x60C; &#x645;&#x62C;&#x62F;&#x62F;&#x627;&#x64B; &#x627;&#x644;&#x62A;&#x641;&#x62C;&#x64A;&#x631; &#x627;&#x644;&#x627;&#x646;&#x62A;&#x62D;&#x627;&#x631;&#x64A; &#x627;&#x644;&#x630;&#x64A; &#x648;&#x642;&#x639; &#x635;&#x628;&#x627;&#x62D; &#x627;&#x644;&#x64A;&#x648;&#x645; &#x627;&#x644;&#x62B;&#x644;&#x627;&#x62B;&#x627;&#x621;&#x60C; &#x641;&#x64A; &#x645;&#x62F;&#x64A;&#x646;&#x629; &#x625;&#x633;&#x637;&#x646;&#x628;&#x648;&#x644; &#x627;&#x644;&#x62A;&#x631;&#x643;&#x64A;&#x629;&#x60C; &#x648;&#x623;&#x633;&#x641;&#x631; &#x639;&#x646; &#x645;&#x642;&#x62A;&#x644; &#x62B;&#x645;&#x627;&#x646;&#x64A;&#x629; &#x623;&#x644;&#x645;&#x627;&#x646;&#x60C; &#x648;&#x648;&#x635;&#x641;&#x62A;&#x647; &#x628;&#x623;&#x646;&#x647; &quot;&#x639;&#x645;&#x644; ...
+                                </p>
+                            </div>
+                        </ion-item>
+                    </ion-list>
+
+                </ion-content>
+            </ion-view>
+
+        </div> <!-- #tab-content3 -->
+
+    </div>
+
+
+    
+    
+
+
+    
+
+      </ion-content>
+
+
+       </ion-side-menu-content>
+
+
+            <ion-side-menu side="right">
+          <div class="">
+              <div class="MainMenuTabs">
+                  <ul>
+                      <li class="ActiveTab"><a href="#" class="NewsLink"></a></li>
+                      <li><a href="#" class="VideoLink"></a></li>
+                      <li><a href="#" class="AboutLink"></a></li>
+                  </ul>
+              </div>
+              <div class="Clear"></div>
+                    <div class="MainMenu">
+                        <ul>
+                            <li><a href="#">&#x639;&#x631;&#x628;&#x64A;</a></li>
+                            <li><a href="#">&#x62F;&#x648;&#x644;&#x64A;</a></li>
+                            <li><a href="#">&#x627;&#x644;&#x625;&#x645;&#x627;&#x631;&#x627;&#x62A;</a></li>
+                            <li><a href="#">&#x625;&#x62A;&#x62C;&#x627;&#x647;&#x627;&#x62A;</a></li>
+                            <li><a href="#">&#x62A;&#x643;&#x646;&#x648;&#x644;&#x648;&#x62C;&#x64A;&#x627;</a></li>
+                            <li><a href="#">&#x635;&#x62D;&#x629;</a></li>
+                            <li><a href="#">&#x645;&#x644;&#x627;&#x639;&#x628;</a></li>
+                            <li><a href="#">&#x644;&#x627;&#x64A;&#x641; &#x633;&#x62A;&#x627;&#x64A;&#x644;</a></li>
+                            <li><a href="#">&#x645;&#x646;&#x648;&#x639;&#x627;&#x62A;</a></li>
+                            <li><a href="#">&#x645;&#x627;&#x644; &#x648;&#x623;&#x639;&#x645;&#x627;&#x644;</a></li>
+                            <li><a href="#">&#x634;&#x628;&#x627;&#x628;</a></li>
+                            <li><a href="#">&#x627;&#x644;&#x635;&#x648;&#x631;</a></li>
+                        </ul>
+                        
+                    </div>
+                    <!--<div class="col">
+                        <ion-list>  
+                               
+                        </ion-list>
+
+                    </div>-->
+
+                </div>
+            </ion-side-menu>
+          
+        </ion-side-menus>  
+        
+        
+         
+        
+
+    </ion-pane>
+    
+</body>
+</html>

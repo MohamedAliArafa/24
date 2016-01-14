@@ -1,0 +1,153 @@
+﻿<!DOCTYPE html>
+<html dir="rtl">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+        <link href="lib/ionic/css/ionic.min.css" rel="stylesheet">
+        <link href="Design/MyCss.css" rel="stylesheet">
+        <script src="lib/ionic/js/ionic.bundle.js"></script>
+        <script src="js/app.js"></script>
+        <link href="Design/FontAr/Font.css" rel="stylesheet" />
+        <link href="Design/Taps/MyCss2.css" rel="stylesheet" />
+    </head>
+    <body ng-app="app">
+    <ion-pane ng-controller="MyController">
+
+        <ion-side-menus>
+            <ion-side-menu-content>
+                
+                
+                <ion-header-bar class="topContainer" id="TopBar">
+                    <ul class="Top-Header-List">
+                        <li><a href="#"><img src="Design/Images/Icon/Search.png"></a></li>
+                        <li><a href="index.html"><img src="Design/Images/Icon/logo.png"></a></li>
+                        <li><button class="MenuButton" ng-click="toggleLeft()"><i class="icon ion-android-menu"></i></button></li>
+                    </ul>
+                    <div class="Clear"></div>
+                </ion-header-bar>
+                
+     
+
+
+
+<ion-content style="overflow: hidden">
+    
+        <!--<div style="height: 6.3em"></div>-->
+    
+
+    <div class="Clear"></div>
+    
+    <ion-view view-title="Main">
+        <ion-content class="padding">
+            <ion-list>
+                <h1 class="item bg-Arabic">عربي  </h1>
+                <ion-item ng-repeat="article in model.ArabicMain" class="No-Item">
+
+                    <div class="Title-Two">
+                        {{ article.Title}}
+                    </div>
+                    <div>
+                        <img src="{{article.BigImageUrl}}" class="img_small">
+                    </div>
+                    <div class="Block-Margin-Bottom1 Clear"></div>
+                    <div class="item item-divider item item-text-wrap txt-Source">
+                        <i>المصدر:{{ article.TheSource}}</i>
+                        <a href="#"><span class="Shre-Icon Left"></span></a>
+                    </div>
+                    <div class="Block-Margin-Bottom1 Clear"></div>
+                    <div class="item item-text-wrap No-Item txt-Description">
+                        الأربعاء 13 يناير 2016 / 12:21
+                    </div>
+                    <div class="Block-Margin-Bottom1 Clear"></div>
+                    <div class="item item-text-wrap No-Item txt-Description">{{ article.Title}}</div>
+                    <div class="Block-Margin-Bottom1 Clear"></div>
+                </ion-item>
+            </ion-list>
+            <div class="Block-Margin-Bottom1 Clear"></div>
+
+            <ion-list>
+                <h3 class="Title-Two No-Item">موضوعات ذات صله</h3>
+                <ion-item class="No-Item">
+                    <div class="item">
+                        <a href="#">كوريا الشمالية تُهدد بمحو الولايات المتحدة من على وجه الأرض </a>
+                    </div>
+
+                    <div class="item">
+                        <a href="#">ميركل بعد انفجار إسطنبول: الإرهابيون أعداء كل البشر  </a>
+                    </div>
+                    <div class="item">
+                        <a href="#">كوريا الشمالية تُهدد بمحو الولايات المتحدة من على وجه الأرض </a>
+                    </div>
+
+                    <div class="item">
+                        <a href="#">ميركل بعد انفجار إسطنبول: الإرهابيون أعداء كل البشر  </a>
+                    </div>
+                </ion-item>
+            </ion-list>
+
+            <div class="Block-Margin-Bottom1 Clear"></div>
+
+        </ion-content>
+    </ion-view>
+    
+    
+
+    
+    
+
+
+    
+
+      </ion-content>
+
+
+       </ion-side-menu-content>
+
+
+            <ion-side-menu side="right">
+          <div class="">
+              <div class="MainMenuTabs">
+                  <ul>
+                      <li class="ActiveTab"><a href="#" class="NewsLink"></a></li>
+                      <li><a href="#" class="VideoLink"></a></li>
+                      <li><a href="#" class="AboutLink"></a></li>
+                  </ul>
+              </div>
+              <div class="Clear"></div>
+                    <div class="MainMenu">
+                        <ul>
+                            <li><a href="#">عربي</a></li>
+                            <li><a href="#">دولي</a></li>
+                            <li><a href="#">الإمارات</a></li>
+                            <li><a href="#">إتجاهات</a></li>
+                            <li><a href="#">تكنولوجيا</a></li>
+                            <li><a href="#">صحة</a></li>
+                            <li><a href="#">ملاعب</a></li>
+                            <li><a href="#">لايف ستايل</a></li>
+                            <li><a href="#">منوعات</a></li>
+                            <li><a href="#">مال وأعمال</a></li>
+                            <li><a href="#">شباب</a></li>
+                            <li><a href="#">الصور</a></li>
+                        </ul>
+                        
+                    </div>
+                    <!--<div class="col">
+                        <ion-list>  
+                               
+                        </ion-list>
+
+                    </div>-->
+
+                </div>
+            </ion-side-menu>
+          
+        </ion-side-menus>  
+        
+        
+         
+        
+
+    </ion-pane>
+    
+</body>
+</html>
