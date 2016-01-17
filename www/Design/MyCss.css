@@ -25,6 +25,38 @@ h2{font-size: 1.6em;color: #167ab6;}
 h3{font-size: 1.4em;color: #89929b;}
 h4{font-size: 0.2em;color: #000;}
 
+
+.transition-delay2 {
+    /*-webkit-transition-delay: 500ms;
+    -moz-transition-delay: 500ms;
+    -o-transition-delay: 500ms;
+    transition-delay: 500ms;*/
+}
+
+.has-header
+{
+    top: 3.2em;
+}
+.Normal-Paragrah
+{
+    white-space: normal !important;
+    line-height: normal;
+    overflow: auto !important;
+    text-align: justify;
+}
+
+.Home-Icon
+{
+        padding: 0 .4em;
+    display: inline-block;
+    font-size: 1.7em !important;
+}
+.Home-Icon i
+{
+    color: #167ab6;
+    font-size: 1.2em !important;
+}
+
 .bg-Arabic,.bg-International,.bg-UAE{background-color: #167ab6;color: #FFF;}
 .bg-Article,bg-Directions{background-color: #6e7e48;color: #FFF;}
 .bg-Technology{background-color: #cccf51;color: #FFF;}
@@ -57,30 +89,70 @@ h4{font-size: 0.2em;color: #000;}
 {
     background-color: #e7e7e7;
 }
+.MainMenu li h2
+{
+    display: block;
+    padding: .8em 1.4em .8em 0;
+    margin: 0;
+    font-size: 1.3em;
+}
 .MainMenu li a
 {
     display: block;
-    padding: .8em .4em;
+    padding: .8em 1.4em .8em 0;
     margin: 0;
     color: #333;
     font-size: 1.0em;
 }
-.MainMenu li:nth-child(1) a{color: #167ab6;}
-.MainMenu li:nth-child(2) a{color: #167ab6;}
-.MainMenu li:nth-child(3) a{color: #167ab6;}
-.MainMenu li:nth-child(4) a{color: #6e7e48;}
+.MainMenu li a.Arabic{color: #167ab6;}
+.MainMenu li a.International{color: #167ab6;}
+.MainMenu li a.UAE{color: #167ab6;}
+.MainMenu li a.Directions{color: #6e7e48;}
 
-.MainMenu li:nth-child(5) a{color: #cccf51;}
-.MainMenu li:nth-child(6) a{color: #2294db;}
-.MainMenu li:nth-child(7) a{color: #009451;}
+.MainMenu li a.Technology{color: #cccf51;}
+.MainMenu li a.Health{color: #2294db;}
+.MainMenu li a.Sport{color: #009451;}
 
-.MainMenu li:nth-child(8) a{color: #9f2f78;}
-.MainMenu li:nth-child(9) a{color: #5f3fa3;}
+.MainMenu li a.LifeStyle{color: #9f2f78;}
+.MainMenu li a.Varitiess{color: #5f3fa3;}
 
-.MainMenu li:nth-child(10) a{color: #d36f22;}
-.MainMenu li:nth-child(11) a{color: #da035d;}
-.MainMenu li:nth-child(12) a{color: #333;}
+.MainMenu li a.Bsiness{color: #d36f22;}
+.MainMenu li a.Youth{color: #da035d;}
+.MainMenu li a.Pictures{color: #333;}
 
+.MainMenu li a.News{color: #1f75b0;}
+.MainMenu li a.UAE2{color: #bb0002;}
+.MainMenu li a.Documentary{color: #8b6325;}
+.MainMenu li a.Varitiess2{color: #8f2968;}
+.MainMenu li a.Sport2{color: #006134;}
+
+.MainMenu li .Soical-Icons
+{
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+.MainMenu .Soical-Icons li
+{
+    width: 4.6em;
+    padding: .1px .2px;
+    margin: 0;
+    display: inline-block;
+    border-bottom: 0 solid #ddd;
+}
+.MainMenu .Soical-Icons li a
+{
+    display: inline-block;
+    padding: 0 0;
+    margin: 0;
+    color: #333;
+}
+.MainMenu .Soical-Icons li a img
+{
+    width: 100%;
+}
+
+/**/
 .MainMenuTabs
 {
     padding: 0;
@@ -323,7 +395,7 @@ h4{font-size: 0.2em;color: #000;}
 .Top-Header-List li:nth-child(1)
 {
     width: 33.3%;
-    padding: .4em 0 0 0;
+    padding: .6em 0 0 0;
     text-align: left;
 }
 .Top-Header-List li:nth-child(2)
@@ -333,7 +405,7 @@ h4{font-size: 0.2em;color: #000;}
 }
 .Top-Header-List li:nth-child(2) img
 {
-    width: 3.4em;
+    width: 4.5em;
 }
 .Top-Header-List li:nth-child(3)
 {
@@ -347,4 +419,39 @@ h4{font-size: 0.2em;color: #000;}
 .Top-Header-List li a
 {
 
+}
+
+
+/*Splash*/
+.Splash-Wrapper
+{
+    text-align: center;
+    width: 100%;
+    height: 100vh;
+    padding: 12em 0 0 0;
+    background-image: url( Images/bg.jpg);
+    background-position: center top;
+    background-size: 100%;
+}
+
+.SplashList
+{
+    padding: 0;
+    margin: 0 0 0 0;
+}
+.SplashList li
+{
+    padding: 0;
+    margin: 0 0 2em 0;
+    display: block;
+}
+.SplashList li:last-child
+{
+    margin: 0 0 0em 0;
+}
+.SplashList li h1
+{
+    color: #89929b;
+    font-family:"HelveticaNeueLTW20-Roma";
+    font-size: 1.5em;
 }

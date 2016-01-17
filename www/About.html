@@ -1,0 +1,211 @@
+﻿<!DOCTYPE html>
+<html dir="rtl">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+        <link href="lib/ionic/css/ionic.min.css" rel="stylesheet">
+        <link href="Design/MyCss.css" rel="stylesheet">
+        <script src="lib/ionic/js/ionic.bundle.js"></script>
+        <script src="js/app.js"></script>
+        <link href="Design/FontAr/Font.css" rel="stylesheet" />
+        <link href="Design/Taps/MyCss2.css" rel="stylesheet" />
+        <link href="Design/Css3.css" rel="stylesheet" />
+    </head>
+    <body ng-app="app">
+    <ion-pane ng-controller="MyController">
+
+        <ion-side-menus>
+            <ion-side-menu-content>
+                
+                
+                <ion-header-bar class="topContainer" id="TopBar">
+                    <ul class="Top-Header-List">
+                        <li><a href="index2.html"> <span class="Home-Icon"><i class="icon ion-android-arrow-back"></i></span></a></li>
+                        <li><a href="index2.html"><img src="Design/Images/Icon/logo.png"></a></li>
+                        <li>
+                        <button class="MenuButton" ng-click="toggleLeft()"><i class="icon ion-android-menu"></i></button>
+                            <a href="index2.html"> <span class="Home-Icon"><i class="icon ion-android-home"></i></span></a></li>
+                    </ul>
+                    <div class="Clear"></div>
+                </ion-header-bar>
+                
+     
+
+
+
+<ion-content style="overflow: hidden">
+    
+        <!--<div style="height: 6.3em"></div>-->
+    
+
+    <div class="Clear"></div>
+    
+    
+    <ion-view view-title="Main">
+        <ion-content class="padding">
+            <ion-list>
+                <h3 class="item bg-Arabic animated bounceInDown">من نحن</h3>
+                <ion-item class="No-Item animated bounceInRight">
+                    <p class="Normal-Paragrah">
+                        نحن منبر إعلامي ينطلق من دولة الإمارات العربية المتحدة إلى الدول العربية والعالم.
+                    </p>
+                    <p class="Normal-Paragrah">
+                        ويشكّل موقع 24 الإلكتروني جزءاً من مجموعة مبادرات إعلامية تحت مظلة "24 للدراسات الإعلامية"، وهو يلتزم خطّها الإعلامي والسياسي ويتوخّى خدمة أهدافها في المساهمة في تكوين بيئة إعلامية جادّة ورصينة ترمي إلى إشاعة قيم التعددية والتسامح وتعايش الثقافات ونبذ التعصّب والتزمّت بشتى أشكاله وتعبيراته.
+                    </p>
+                    <p class="Normal-Paragrah">
+                        كما يسعى 24 إلى أن يكون جزءاً من مشهد إعلامي حديث ومتطور يستفيد من أحدث التقنيات في عالم الميديا والاتصال متسلحاً بقيم مهنية رفيعة تتوخى المصداقية والموضوعية وتبتعد عن الترويج لكلّ ما يتناقض مع القيم الإنسانية.
+                    </p>
+                    <p class="Normal-Paragrah">
+                        يتكون فريق عمل 24 من نخبة من الإعلاميين الإماراتيين والعرب ممن يتمتعون بتجارب مهنية مرموقة ولاسيما في مجال الإعلام الإلكتروني، وهم في غالبيتهم من الشابات والشبان الطامحين الهادفين إلى إنجاز تجربة مميزة وجديدة على المشهد الإعلامي العربي.
+                    </p>
+                    <p>
+
+                    </p>
+                </ion-item>
+            </ion-list>
+            <div class="Block-Margin-Bottom1 Clear"></div>
+
+            <ion-list>
+                <ion-item class="No-Item animated bounceInRight">
+                    <h3 class="Title-Two">يمكنكم التواصل معنا من خلال البريد الإلكتروني: </h3>
+                    <h3>24@24.ae </h3>
+                    <div class="Block-Margin-Bottom1 Clear"></div>
+
+                    <h3 class="Title-Two">أو من خلال مواقع التواصل الاجتماعي: </h3>
+                    <h3>تويتر: 20fourMedia </h3>
+                    <h3>فيسبوك: 24Media</h3>
+                    <div class="Block-Margin-Bottom1 Clear"></div>
+
+                    <h3 class="Title-Two">أو من خلال المراسلات البريدية على عنوان:</h3>
+                    <h3>موقع 24</h3>
+                    <h3>شارع السلام - بجانب روتانا بارك twofour54</h3>
+                    <h3>أبوظبي- الإمارات العربية المتحدة</h3>
+                    <h3>صندوق بريد: 77972</h3>
+                    <h3>هاتف: 26942000(971+)</h3>
+                    <h3>فاكس: 26218422(971+)</h3>
+                    <div class="Block-Margin-Bottom1 Clear"></div>
+
+
+                </ion-item>
+            </ion-list>
+
+            <div class="Block-Margin-Bottom1 Clear"></div>
+
+        </ion-content>
+    </ion-view>
+
+
+    
+    
+
+
+    
+
+      </ion-content>
+
+
+       </ion-side-menu-content>
+
+
+            <ion-side-menu side="right">
+          <div>
+
+              <div class="RightMenuTaps">
+
+       
+            <input type="radio" name="tabs" id="RightMenuTaps-tab1" >
+            <label for="RightMenuTaps-tab1">
+                <span class="NewsLink"></span>
+            </label>
+
+            <input type="radio" name="tabs" id="RightMenuTaps-tab2">
+            <label for="RightMenuTaps-tab2">
+                <span class="VideoLink"></span>
+            </label>
+
+            <input type="radio" name="tabs" id="RightMenuTaps-tab3" checked>
+            <label for="RightMenuTaps-tab3">
+                <span class="AboutLink"></span>
+            </label>
+
+        <div id="RightMenuTaps-content1" class="RightMenuTaps-content">
+            <div class="MainMenu">  <ul>
+                                <li><a href="Arabic.html" class="Arabic">عربي</a></li>
+                                <li><a href="International.html" class="International">دولي</a></li>
+                                <li><a href="UAE.html" class="UAE">الإمارات</a></li>
+                                <li><a href="Directions.html" class="Directions">إتجاهات</a></li>
+                                <li><a href="Technology.html" class="Technology">تكنولوجيا</a></li>
+                                <li><a href="Health.html" class="Health">صحة</a></li>
+                                <li><a href="Sports.html" class="Sport">ملاعب</a></li>
+                                <li><a href="LifeStyle.html" class="LifeStyle">لايف ستايل</a></li>
+                                <li><a href="Varities.html" class="Varitiess">منوعات</a></li>
+                                <li><a href="Business.html" class="Bsiness">مال وأعمال</a></li>
+                                <li><a href="Youth.html" class="Youth">شباب</a></li>
+                                <li><a href="Pictures.html" class="Pictures">الصور</a></li>
+                            </ul>
+
+            </div>
+            
+        </div> <!-- #tab-content1 -->
+
+        <div id="RightMenuTaps-content2" class="RightMenuTaps-content">
+
+            <div class="MainMenu">
+                <ul>
+                    <li><h2 href="#">قنوات 24</h2></li>
+                    <li><a href="#" class="News">الإخبارية</a></li>
+                    <li><a href="#" class="UAE2">الإماراتية</a></li>
+                    <li><a href="#" class="Documentary">الوثائقية</a></li>
+                    <li><a href="#" class="Varitiess2">منوعات</a></li>
+                    <li><a href="#" class="Sport2">ملاعب</a></li>
+                    <li><h2 href="#">قوائم التشغيل</h2></li>
+                    <li><h2 href="#">قنوات 24</h2></li>
+                    <li><h2 href="#">أحدث الأفلام</h2></li>
+                </ul>
+
+            </div>
+
+        </div> <!-- #tab-content2 -->
+
+        <div id="RightMenuTaps-content3" class="RightMenuTaps-content">
+
+            <div class="MainMenu"> <ul>
+                                <li><a href="About.html">من نحن</a></li>
+                                <li><a href="our-team.html">فريق العمل</a></li>
+                                <li><a href="privacy-policy.html">سياسة الخصوصية</a></li>
+                                <li><a href="terms-and-conditions.html">الشروط والأحكام</a></li>
+                                <li> <a>تواصل معنا علي</a></li>
+                            </ul>
+                            <ul class="Soical-Icons">
+                                        <li><a href="#"><img src="Design/Images/Social/whatsapp.jpg" /></a></li>
+                                        <li><a href="#"><img src="Design/Images/Social/instagram.jpg" /></a></li>
+                                        <li><a href="#"><img src="Design/Images/Social/Twitter.jpg" /></a></li>
+                                        <li><a href="#"><img src="Design/Images/Social/Facebook.jpg" /></a></li>
+                                        <li><a href="#"><img src="Design/Images/Social/Telegram.jpg" /></a></li>
+                                        <li><a href="#"><img src="Design/Images/Social/Google.jpg" /></a></li>
+                                        <li><a href="https://www.youtube.com/user/20fourMedia" target="_blank"><img src="Design/Images/Social/youtube.jpg" /></a></li>
+                                    </ul>
+	
+
+            </div>
+
+        </div> <!-- #tab-content3 -->
+
+    </div>
+
+              
+
+
+                </div>
+            </ion-side-menu>
+          
+        </ion-side-menus>  
+        
+        
+         
+        
+
+    </ion-pane>
+    
+</body>
+</html>

@@ -1,35 +1,172 @@
 var app = angular.module('app', ['ionic']);
 
-app.controller("MyController", function ($scope, NewsService, $ionicSideMenuDelegate, $ionicSlideBoxDelegate) {
+app.config(function ($stateProvider, $urlRouterProvider) {
+  
+    $stateProvider
+            .state('index', {
+                url: '/',
+                templateUrl: 'index.html',
+                controller: 'IndexCtrl'
+            })
+
+            .state('splash', {
+                url: '/splash',
+                templateUrl: 'Splash.html',
+                controller: 'MyController'
+            });
+
+    $urlRouterProvider.otherwise("/");
+
+});
+
+app.controller("Splash-Controller", function ($scope) {
+
+    $scope.delay2 = 8000;
+    $scope.GoToSplash = function () {
+
+        setTimeout(function () {
+            window.location.replace("index2.html");
+            console.log("HI Replace ");
+            //window.location="News2.html";
+
+        }, $scope.delay2);
+
+
+    };
+
+
+
+
+
+    $scope.GoToSplash();
+
+});
+
+
+
+
+
+app.controller("MyController", function ($scope, NewsService, $ionicSideMenuDelegate, $ionicSlideBoxDelegate, $sce, $state) {
 
     $scope.model = {
-        'SliderArticles': [],
+        'RecentArticles': [],
+        'RecentArticlesAll': [],
+        'FrequentArticles': [],
         'ArabicArticles': [],
         'ArabicMain': [],
+        'ArabicArticlesAll': [],
         'BusinessArticles': [],
         'BusinessMain': [],
+        'BusinessArticlesAll': [],
         'HealthArticles': [],
+        'HealthArticlesAll': [],
         'HealthMain': [],
         'CultureArticles': [],
+        'CultureArticlesAll': [],
         'CultureMain': [],
         'DirectionsArticles': [],
+        'DirectionsArticlesAll': [],
         'DirectionsMain': [],
         'InternationalArticles': [],
         'InternationalMain': [],
+        'InternationalArticlesAll': [],
         'LifeStyleArticles': [],
+        'LifeStyleArticlesAll': [],
         'LifeStyleMain': [],
         'TechnologyArticles': [],
+        'TechnologyArticlesAll': [],
         'TechnologyMain': [],
         'VaritiesArticles': [],
+        'VaritiesArticlesAll': [],
         'VaritiessMain': [],
         'YouthArticles': [],
+        'YouthArticlesAll': [],
         'YouthMain': [],
         'SportArticles': [],
+        'SportArticlesAll': [],
         'UAEArticles': [],
-        'Pictures': []
+        'UAEArticlesAll': [],
+        'Pictures': [],
+        'PicturesAll': [],
+        'Videos': [],
+        'Article': [],
+        'RelatedArticles': []
+
     };
-    
+	
+	$scope.GoToYoutube = function(){
+		  window.location = "https://www.youtube.com/user/20fourMedia";
+			console.log("Test Youtube");
+		};
+
+
+    $scope.sendData_RelatedArticles = function (ArticleId, SectionId, NumberOfItems) {
+        // Initialize packed or we get the word 'undefined'
+        //window.location = "Article-Detail.html?" + index;
+        console.log("ArticleId : " + ArticleId + "  SectionId : " + SectionId + "  NumberOfItems : " + NumberOfItems);
+        
+        NewsService.loadRelatedArticles(ArticleId, SectionId, NumberOfItems).then(function success(data) {
+            $scope.model.RelatedArticles = NewsService.RelatedArticles;
+            console.log("Related Article Test 1" + $scope.model.RelatedArticles);
+
+
+        }, function error(data) {
+            console.log("Error!");
+        });
+        
+        
+    };
+
+
+
+
+    $scope.sendData = function (index) {
+        // Initialize packed or we get the word 'undefined'
+        window.location = "Article-Detail.html?" + index;
+        console.log(index);
+
+    };
+
+    var query = window.location.search;
+    // Skip the leading ?, which should always be there, 
+    // but be careful anyway
+    if (query.substring(0, 1) === '?') {
+        query = query.substring(1);
+    }
+
+    NewsService.loadArticle(query).then(function success(data) {
+        $scope.model.Article = NewsService.Article;
+        console.log($scope.model.Article);
+
+        $scope.sendData_RelatedArticles($scope.model.Article.ArticleId, $scope.model.Article.SectionId, 4);
+
+
+    }, function error(data) {
+        console.log("Error!");
+    });
+
+
+
+
+
+//    var query2 = window.location.search;
+//    // Skip the leading ?, which should always be there, 
+//    // but be careful anyway
+//    if (query2.substring(0, 1) === '?') {
+//        query2 = query2.substring(1);
+//    }
+
+
+
+
+
+
+
     $ionicSlideBoxDelegate.update();
+
+    $scope.trustSrc = function (src) {
+        return $sce.trustAsResourceUrl(src);
+    };
 
     $scope.toggleLeft = function () {
         $ionicSideMenuDelegate.toggleRight();
@@ -50,27 +187,66 @@ app.controller("MyController", function ($scope, NewsService, $ionicSideMenuDele
 
     // login Func To track on click listener on any item
     $scope.login = function () {
-         $ionicSlideBoxDelegate.update();
+        $ionicSlideBoxDelegate.update();
     };
-    
-    $scope.login2 = function() {
-console.log("Menu Icon");
-};
-    
-    
-    NewsService.loadSlideArticles().then(function success(data) {
+
+    $scope.login2 = function () {
+        console.log("Menu Icon Test Call");
+    };
+
+    $scope.GoToSplash2 = function () {
+
+        /// window.location.replace("index2.html");
+        console.log("HI Replace ");
+        window.location = "News2.html";
+
+    };
+
+    //   $scope.GoToSplash();
+    //  $scope.login2();
+
+    NewsService.loadRecentArticles(2).then(function success(data) {
         console.log("Success!");
-        $scope.model.SliderArticles = NewsService.SliderArticles;
+        $scope.model.RecentArticles = NewsService.RecentArticles;
     }, function error(data) {
         console.log("Error!");
     });
 
-    NewsService.loadArabic().then(function success(data) {
+    NewsService.loadRecentArticles(15).then(function success(data) {
+        console.log("Success!");
+        $scope.model.RecentArticlesAll = NewsService.RecentArticles;
+    }, function error(data) {
+        console.log("Error!");
+    });
+
+
+
+
+
+
+    NewsService.loadFrequentArticles().then(function success(data) {
+        console.log("Success!");
+        $scope.model.FrequentArticles = NewsService.FrequentArticles;
+    }, function error(data) {
+        console.log("Error!");
+    });
+
+    NewsService.loadArabic(2).then(function success(data) {
         console.log("Success!");
         $scope.model.ArabicArticles = NewsService.ArabicArticles;
     }, function error(data) {
         console.log("Error!");
     });
+
+    NewsService.loadArabic(15).then(function success(data) {
+        console.log("Success!");
+        $scope.model.ArabicArticlesAll = NewsService.ArabicArticles;
+    }, function error(data) {
+        console.log("Error!");
+    });
+
+
+
 
     NewsService.loadArabicMain().then(function success(data) {
         console.log("Success!");
@@ -79,12 +255,22 @@ console.log("Menu Icon");
         console.log("Error!");
     });
 
-    NewsService.loadBusiness().then(function success(data) {
+    NewsService.loadBusiness(2).then(function success(data) {
         console.log("Success!");
         $scope.model.BusinessArticles = NewsService.BusinessArticles;
     }, function error(data) {
         console.log("Error!");
     });
+
+    NewsService.loadBusiness(15).then(function success(data) {
+        console.log("Success!");
+        $scope.model.BusinessArticlesAll = NewsService.BusinessArticles;
+    }, function error(data) {
+        console.log("Error!");
+    });
+
+
+
 
     NewsService.loadBusinessMain().then(function success(data) {
         console.log("Success!");
@@ -93,9 +279,17 @@ console.log("Menu Icon");
         console.log("Error!");
     });
 
-    NewsService.loadHealth().then(function success(data) {
+    NewsService.loadHealth(2).then(function success(data) {
         console.log("Success!");
         $scope.model.HealthArticles = NewsService.HealthArticles;
+    }, function error(data) {
+        console.log("Error!");
+    });
+
+
+    NewsService.loadHealth(15).then(function success(data) {
+        console.log("Success!");
+        $scope.model.HealthArticlesAll = NewsService.HealthArticles;
     }, function error(data) {
         console.log("Error!");
     });
@@ -106,9 +300,17 @@ console.log("Menu Icon");
     }, function error(data) {
         console.log("Error!");
     });
-    NewsService.loadCulture().then(function success(data) {
+
+    NewsService.loadCulture(2).then(function success(data) {
         console.log("Success!");
         $scope.model.CultureArticles = NewsService.CultureArticles;
+    }, function error(data) {
+        console.log("Error!");
+    });
+
+    NewsService.loadCulture(15).then(function success(data) {
+        console.log("Success!");
+        $scope.model.CultureArticlesAll = NewsService.CultureArticles;
     }, function error(data) {
         console.log("Error!");
     });
@@ -120,9 +322,16 @@ console.log("Menu Icon");
         console.log("Error!");
     });
 
-    NewsService.loadDirections().then(function success(data) {
+    NewsService.loadDirections(2).then(function success(data) {
         console.log("Success!");
         $scope.model.DirectionsArticles = NewsService.DirectionsArticles;
+    }, function error(data) {
+        console.log("Error!");
+    });
+
+    NewsService.loadDirections(15).then(function success(data) {
+        console.log("Success!");
+        $scope.model.DirectionsArticlesAll = NewsService.DirectionsArticles;
     }, function error(data) {
         console.log("Error!");
     });
@@ -134,9 +343,15 @@ console.log("Menu Icon");
         console.log("Error!");
     });
 
-    NewsService.loadInternational().then(function success(data) {
+    NewsService.loadInternational(2).then(function success(data) {
         console.log("Success!");
         $scope.model.InternationalArticles = NewsService.InternationalArticles;
+    }, function error(data) {
+        console.log("Error!");
+    });
+    NewsService.loadInternational(15).then(function success(data) {
+        console.log("Success!");
+        $scope.model.InternationalArticlesAll = NewsService.InternationalArticles;
     }, function error(data) {
         console.log("Error!");
     });
@@ -147,9 +362,17 @@ console.log("Menu Icon");
     }, function error(data) {
         console.log("Error!");
     });
-    NewsService.loadLifeStyle().then(function success(data) {
+
+    NewsService.loadLifeStyle(2).then(function success(data) {
         console.log("Success!");
         $scope.model.LifeStyleArticles = NewsService.LifeStyleArticles;
+    }, function error(data) {
+        console.log("Error!");
+    });
+
+    NewsService.loadLifeStyle(15).then(function success(data) {
+        console.log("Success!");
+        $scope.model.LifeStyleArticlesAll = NewsService.LifeStyleArticles;
     }, function error(data) {
         console.log("Error!");
     });
@@ -161,9 +384,16 @@ console.log("Menu Icon");
         console.log("Error!");
     });
 
-    NewsService.loadTechnology().then(function success(data) {
+    NewsService.loadTechnology(2).then(function success(data) {
         console.log("Success!");
         $scope.model.TechnologyArticles = NewsService.TechnologyArticles;
+    }, function error(data) {
+        console.log("Error!");
+    });
+
+    NewsService.loadTechnology(15).then(function success(data) {
+        console.log("Success!");
+        $scope.model.TechnologyArticlesAll = NewsService.TechnologyArticles;
     }, function error(data) {
         console.log("Error!");
     });
@@ -175,12 +405,20 @@ console.log("Menu Icon");
         console.log("Error!");
     });
 
-    NewsService.loadVarities().then(function success(data) {
+    NewsService.loadVarities(2).then(function success(data) {
         console.log("Success!");
         $scope.model.VaritiesArticles = NewsService.VaritiesArticles;
     }, function error(data) {
         console.log("Error!");
     });
+
+    NewsService.loadVarities(15).then(function success(data) {
+        console.log("Success!");
+        $scope.model.VaritiesArticlesAll = NewsService.VaritiesArticles;
+    }, function error(data) {
+        console.log("Error!");
+    });
+
 
     NewsService.loadVaritiesMain().then(function success(data) {
         console.log("Success!");
@@ -189,9 +427,17 @@ console.log("Menu Icon");
         console.log("Error!");
     });
 
-    NewsService.loadYouth().then(function success(data) {
+    NewsService.loadYouth(2).then(function success(data) {
         console.log("Success!");
         $scope.model.YouthArticles = NewsService.YouthArticles;
+    }, function error(data) {
+        console.log("Error!");
+    });
+
+
+    NewsService.loadYouth(15).then(function success(data) {
+        console.log("Success!");
+        $scope.model.YouthArticlesAll = NewsService.YouthArticles;
     }, function error(data) {
         console.log("Error!");
     });
@@ -203,32 +449,65 @@ console.log("Menu Icon");
         console.log("Error!");
     });
 
-    NewsService.loadSport().then(function success(data) {
+    NewsService.loadSport(2).then(function success(data) {
         console.log("Success!");
         $scope.model.SportArticles = NewsService.SportArticles;
     }, function error(data) {
         console.log("Error!");
     });
 
-    NewsService.loadUAE().then(function success(data) {
+    NewsService.loadSport(15).then(function success(data) {
+        console.log("Success!");
+        $scope.model.SportArticlesAll = NewsService.SportArticles;
+    }, function error(data) {
+        console.log("Error!");
+    });
+
+
+
+    NewsService.loadUAE(2).then(function success(data) {
         console.log("Success!");
         $scope.model.UAEArticles = NewsService.UAEArticles;
     }, function error(data) {
         console.log("Error!");
     });
 
-    NewsService.loadPictures().then(function success(data) {
+    NewsService.loadUAE(15).then(function success(data) {
+        console.log("Success!");
+        $scope.model.UAEArticlesAll = NewsService.UAEArticles;
+    }, function error(data) {
+        console.log("Error!");
+    });
+
+    NewsService.loadPictures(2).then(function success(data) {
         console.log("Success!");
         $scope.model.Pictures = NewsService.Pictures;
     }, function error(data) {
         console.log("Error!");
     });
 
+    NewsService.loadPictures(15).then(function success(data) {
+        console.log("Success!");
+        $scope.model.PicturesAll = NewsService.Pictures;
+    }, function error(data) {
+        console.log("Error!");
+    });
+
+    NewsService.loadVideos().then(function success(data) {
+        console.log("Success!");
+        $scope.model.Videos = NewsService.Videos;
+    }, function error(data) {
+        console.log("Error!");
+    });
+
+
+
 });
 
 app.service("NewsService", function ($http, $q) {
     var self = {
-        'SliderArticles': [],
+        'RecentArticles': [],
+        'FrequentArticles': [],
         'ArabicArticles': [],
         'ArabicMain': [],
         'BusinessArticles': [],
@@ -252,20 +531,23 @@ app.service("NewsService", function ($http, $q) {
         'SportArticles': [],
         'UAEArticles': [],
         'Pictures': [],
+        'Videos': [],
+        'Article': [],
+        'RelatedArticles': [],
         'replace': function (str, find, replace) {
             return str.replace(new RegExp(escapeRegExp(find), 'g'), replace);
         }
         ,
-        'loadSlideArticles': function () {
+        'loadRecentArticles': function () {
             var d = $q.defer();
-            $http.get("http://24ae.sdg.ae/_MobServices/CLS_MobServices.asmx/GetArticles?NumberOfItems=5")
+            $http.get("http://24ae.sdg.ae/_MobServices/CLS_MobServices.asmx/GetScrollArticles?NumberOfItems=15")
                     .success(function success(data) {
                         data = data.replace("<?xml version=\"1.0\" encoding=\"utf-8\"?>", "");
                         data = data.replace("<string xmlns=\"http://24-MobData.org/\">", "");
                         data = data.replace("</string>", "");
                         data = data.split('~').join('http://24.ae');
-                        self.SliderArticles = JSON.parse(data);
-                        console.log("loadSlider (OK)");
+                        self.RecentArticles = JSON.parse(data);
+                        console.log("loadRecentArticles (OK)");
                         d.resolve();
                     })
                     .error(function error(msg) {
@@ -274,9 +556,27 @@ app.service("NewsService", function ($http, $q) {
                     });
             return d.promise;
         },
-        'loadArabic': function () {
+        'loadFrequentArticles': function () {
             var d = $q.defer();
-            $http.get("http://24ae.sdg.ae/_MobServices/CLS_MobServices.asmx/GetArabicArticles?NumberOfItems=2")
+            $http.get("http://24ae.sdg.ae/_MobServices/CLS_MobServices.asmx/GetMostRead?NumberOfItems=15")
+                    .success(function success(data) {
+                        data = data.replace("<?xml version=\"1.0\" encoding=\"utf-8\"?>", "");
+                        data = data.replace("<string xmlns=\"http://24-MobData.org/\">", "");
+                        data = data.replace("</string>", "");
+                        data = data.split('~').join('http://24.ae');
+                        self.FrequentArticles = JSON.parse(data);
+                        console.log("loadFrequentArticles (OK)");
+                        d.resolve();
+                    })
+                    .error(function error(msg) {
+                        console.log(msg);
+                        d.reject();
+                    });
+            return d.promise;
+        },
+        'loadArabic': function (ArticleNo) {
+            var d = $q.defer();
+            $http.get("http://24ae.sdg.ae/_MobServices/CLS_MobServices.asmx/GetArabicArticles?NumberOfItems=" + ArticleNo)
                     .success(function success(data) {
                         data = data.replace("<?xml version=\"1.0\" encoding=\"utf-8\"?>", "");
                         data = data.replace("<string xmlns=\"http://24-MobData.org/\">", "");
@@ -312,9 +612,9 @@ app.service("NewsService", function ($http, $q) {
             return d.promise;
         }
         ,
-        'loadBusiness': function () {
+        'loadBusiness': function (ArticleNo) {
             var d = $q.defer();
-            $http.get("http://24ae.sdg.ae/_MobServices/CLS_MobServices.asmx/GetBusinessArticles?NumberOfItems=2")
+            $http.get("http://24ae.sdg.ae/_MobServices/CLS_MobServices.asmx/GetBusinessArticles?NumberOfItems=" + ArticleNo)
                     .success(function success(data) {
                         data = data.replace("<?xml version=\"1.0\" encoding=\"utf-8\"?>", "");
                         data = data.replace("<string xmlns=\"http://24-MobData.org/\">", "");
@@ -350,9 +650,9 @@ app.service("NewsService", function ($http, $q) {
             return d.promise;
         }
         ,
-        'loadHealth': function () {
+        'loadHealth': function (ArticleNo) {
             var d = $q.defer();
-            $http.get("http://24ae.sdg.ae/_MobServices/CLS_MobServices.asmx/GetHealthArticles?NumberOfItems=2")
+            $http.get("http://24ae.sdg.ae/_MobServices/CLS_MobServices.asmx/GetHealthArticles?NumberOfItems=" + ArticleNo)
                     .success(function success(data) {
                         data = data.replace("<?xml version=\"1.0\" encoding=\"utf-8\"?>", "");
                         data = data.replace("<string xmlns=\"http://24-MobData.org/\">", "");
@@ -388,9 +688,9 @@ app.service("NewsService", function ($http, $q) {
             return d.promise;
         }
         ,
-        'loadCulture': function () {
+        'loadCulture': function (ArticleNo) {
             var d = $q.defer();
-            $http.get("http://24ae.sdg.ae/_MobServices/CLS_MobServices.asmx/GetCultureArticles?NumberOfItems=2")
+            $http.get("http://24ae.sdg.ae/_MobServices/CLS_MobServices.asmx/GetCultureArticles?NumberOfItems=" + ArticleNo)
                     .success(function success(data) {
                         data = data.replace("<?xml version=\"1.0\" encoding=\"utf-8\"?>", "");
                         data = data.replace("<string xmlns=\"http://24-MobData.org/\">", "");
@@ -426,9 +726,9 @@ app.service("NewsService", function ($http, $q) {
             return d.promise;
         }
         ,
-        'loadDirections': function () {
+        'loadDirections': function (ArticleNo) {
             var d = $q.defer();
-            $http.get("http://24ae.sdg.ae/_MobServices/CLS_MobServices.asmx/GetDirectionsArticles?NumberOfItems=2")
+            $http.get("http://24ae.sdg.ae/_MobServices/CLS_MobServices.asmx/GetDirectionsArticles?NumberOfItems=" + ArticleNo)
                     .success(function success(data) {
                         data = data.replace("<?xml version=\"1.0\" encoding=\"utf-8\"?>", "");
                         data = data.replace("<string xmlns=\"http://24-MobData.org/\">", "");
@@ -464,9 +764,9 @@ app.service("NewsService", function ($http, $q) {
             return d.promise;
         }
         ,
-        'loadInternational': function () {
+        'loadInternational': function (ArticleNo) {
             var d = $q.defer();
-            $http.get("http://24ae.sdg.ae/_MobServices/CLS_MobServices.asmx/GetInternationalArticles?NumberOfItems=2")
+            $http.get("http://24ae.sdg.ae/_MobServices/CLS_MobServices.asmx/GetInternationalArticles?NumberOfItems=" + ArticleNo)
                     .success(function success(data) {
                         data = data.replace("<?xml version=\"1.0\" encoding=\"utf-8\"?>", "");
                         data = data.replace("<string xmlns=\"http://24-MobData.org/\">", "");
@@ -502,9 +802,9 @@ app.service("NewsService", function ($http, $q) {
             return d.promise;
         }
         ,
-        'loadLifeStyle': function () {
+        'loadLifeStyle': function (ArticleNo) {
             var d = $q.defer();
-            $http.get("http://24ae.sdg.ae/_MobServices/CLS_MobServices.asmx/GetLifeStyleArticles?NumberOfItems=2")
+            $http.get("http://24ae.sdg.ae/_MobServices/CLS_MobServices.asmx/GetLifeStyleArticles?NumberOfItems=" + ArticleNo)
                     .success(function success(data) {
                         data = data.replace("<?xml version=\"1.0\" encoding=\"utf-8\"?>", "");
                         data = data.replace("<string xmlns=\"http://24-MobData.org/\">", "");
@@ -540,9 +840,9 @@ app.service("NewsService", function ($http, $q) {
             return d.promise;
         }
         ,
-        'loadTechnology': function () {
+        'loadTechnology': function (ArticleNo) {
             var d = $q.defer();
-            $http.get("http://24ae.sdg.ae/_MobServices/CLS_MobServices.asmx/GetTechnologyArticles?NumberOfItems=2")
+            $http.get("http://24ae.sdg.ae/_MobServices/CLS_MobServices.asmx/GetTechnologyArticles?NumberOfItems=" + ArticleNo)
                     .success(function success(data) {
                         data = data.replace("<?xml version=\"1.0\" encoding=\"utf-8\"?>", "");
                         data = data.replace("<string xmlns=\"http://24-MobData.org/\">", "");
@@ -578,9 +878,9 @@ app.service("NewsService", function ($http, $q) {
             return d.promise;
         }
         ,
-        'loadVarities': function () {
+        'loadVarities': function (ArticleNo) {
             var d = $q.defer();
-            $http.get("http://24ae.sdg.ae/_MobServices/CLS_MobServices.asmx/GetVaritiesArticles?NumberOfItems=2")
+            $http.get("http://24ae.sdg.ae/_MobServices/CLS_MobServices.asmx/GetVaritiesArticles?NumberOfItems=" + ArticleNo)
                     .success(function success(data) {
                         data = data.replace("<?xml version=\"1.0\" encoding=\"utf-8\"?>", "");
                         data = data.replace("<string xmlns=\"http://24-MobData.org/\">", "");
@@ -617,9 +917,9 @@ app.service("NewsService", function ($http, $q) {
         }
 
         ,
-        'loadYouth': function () {
+        'loadYouth': function (ArticleNo) {
             var d = $q.defer();
-            $http.get("http://24ae.sdg.ae/_MobServices/CLS_MobServices.asmx/GetYouthArticles?NumberOfItems=2")
+            $http.get("http://24ae.sdg.ae/_MobServices/CLS_MobServices.asmx/GetYouthArticles?NumberOfItems=" + ArticleNo)
                     .success(function success(data) {
                         data = data.replace("<?xml version=\"1.0\" encoding=\"utf-8\"?>", "");
                         data = data.replace("<string xmlns=\"http://24-MobData.org/\">", "");
@@ -656,9 +956,9 @@ app.service("NewsService", function ($http, $q) {
         }
 
         ,
-        'loadSport': function () {
+        'loadSport': function (ArticleNo) {
             var d = $q.defer();
-            $http.get("http://24ae.sdg.ae/_MobServices/CLS_MobServices.asmx/GetScrollArticlesForSport?NumberOfItems=2")
+            $http.get("http://24ae.sdg.ae/_MobServices/CLS_MobServices.asmx/GetScrollArticlesForSport?NumberOfItems=" + ArticleNo)
                     .success(function success(data) {
                         data = data.replace("<?xml version=\"1.0\" encoding=\"utf-8\"?>", "");
                         data = data.replace("<string xmlns=\"http://24-MobData.org/\">", "");
@@ -676,9 +976,9 @@ app.service("NewsService", function ($http, $q) {
         }
 
         ,
-        'loadUAE': function () {
+        'loadUAE': function (ArticleNo) {
             var d = $q.defer();
-            $http.get("http://24ae.sdg.ae/_MobServices/CLS_MobServices.asmx/GetScrollArticlesForUAE?NumberOfItems=2")
+            $http.get("http://24ae.sdg.ae/_MobServices/CLS_MobServices.asmx/GetScrollArticlesForUAE?NumberOfItems=" + ArticleNo)
                     .success(function success(data) {
                         data = data.replace("<?xml version=\"1.0\" encoding=\"utf-8\"?>", "");
                         data = data.replace("<string xmlns=\"http://24-MobData.org/\">", "");
@@ -696,16 +996,71 @@ app.service("NewsService", function ($http, $q) {
         }
 
         ,
-        'loadPictures': function () {
+        'loadPictures': function (ArticleNo) {
             var d = $q.defer();
-            $http.get("http://24ae.sdg.ae/_MobServices/CLS_MobServices.asmx/GetPictures?NumberOfItems=2")
+            $http.get("http://24ae.sdg.ae/_MobServices/CLS_MobServices.asmx/GetPictures?NumberOfItems=" + ArticleNo)
                     .success(function success(data) {
                         data = data.replace("<?xml version=\"1.0\" encoding=\"utf-8\"?>", "");
                         data = data.replace("<string xmlns=\"http://24-MobData.org/\">", "");
                         data = data.replace("</string>", "");
-                        data = data.split('~').join('http://24.ae');
+                        data = data.split('24.ae').join('http://24.ae');
                         self.Pictures = JSON.parse(data);
                         console.log("loadVarities (OK)");
+                        d.resolve();
+                    })
+                    .error(function error(msg) {
+                        console.log(msg);
+                        d.reject();
+                    });
+            return d.promise;
+        },
+        'loadVideos': function () {
+            var d = $q.defer();
+            $http.get("http://24ae.sdg.ae/_MobServices/CLS_MobServices.asmx/Get24Videos?NumberOfItems=10")
+                    .success(function success(data) {
+                        data = data.replace("<?xml version=\"1.0\" encoding=\"utf-8\"?>", "");
+                        data = data.replace("<string xmlns=\"http://24-MobData.org/\">", "");
+                        data = data.replace("</string>", "");
+                        data = data.split('~').join('http://video.24.ae');
+                        data = data.split('watch?v=').join('embed/');
+                        self.Videos = JSON.parse(data);
+                        console.log(self.Videos);
+                        d.resolve();
+                    })
+                    .error(function error(msg) {
+                        console.log(msg);
+                        d.reject();
+                    });
+            return d.promise;
+        },
+        'loadArticle': function (id) {
+            var d = $q.defer();
+            $http.get("http://24ae.sdg.ae/_MobServices/CLS_MobServices.asmx/GetArticleDetails?ArticleId=" + id)
+                    .success(function success(data) {
+                        data = data.replace("<?xml version=\"1.0\" encoding=\"utf-8\"?>", "");
+                        data = data.replace("<string xmlns=\"http://24-MobData.org/\">", "");
+                        data = data.replace("</string>", "");
+                        data = data.split('24.ae').join('http://24.ae');
+                        self.Article = JSON.parse(data);
+                        console.log(self.Article);
+                        d.resolve();
+                    })
+                    .error(function error(msg) {
+                        console.log(msg);
+                        d.reject();
+                    });
+            return d.promise;
+        },
+        'loadRelatedArticles': function (ArticleId, SectionId, NumberOfItems) {
+            var d = $q.defer();
+            $http.get("http://24ae.sdg.ae/_MobServices/CLS_MobServices.asmx/GetRelatedArticles?NumberOfItems=" + NumberOfItems + "&SectionId=" + SectionId + "&ArticleId=" + ArticleId)
+                    .success(function success(data) {
+                        data = data.replace("<?xml version=\"1.0\" encoding=\"utf-8\"?>", "");
+                        data = data.replace("<string xmlns=\"http://24-MobData.org/\">", "");
+                        data = data.replace("</string>", "");
+                        data = data.split('24.ae').join('http://24.ae');
+                        self.RelatedArticles = JSON.parse(data);
+                        console.log(self.RelatedArticles);
                         d.resolve();
                     })
                     .error(function error(msg) {

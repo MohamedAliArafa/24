@@ -1,0 +1,75 @@
+.tabs-Css3 {
+  display: inline-block;
+  width: 100%;
+  position: relative;
+}
+.tabs-Css3 li {
+  float: right;
+  display: inline-block;
+  white-space: nowrap;
+  width: 24.7%;
+  padding: 0;
+  margin: 0 0 0 0;
+  border-left: .1em solid #FFF;
+}
+.tabs-Css3 li:last-child {
+  border-left: 0 solid #FFF;
+  width: 25.9%;
+}
+.tabs-Css3>.tab-Css3 {
+ 
+}
+.tab-Css3 {
+  
+}
+
+.tabs-Css3>li>label {
+  text-align: center;
+  min-height: 20px;
+  width: 100%;
+  cursor: pointer;
+  display: inline-table;
+  padding: 10px 0;
+  margin: 0;
+  color: #fff;
+  font-size: 1em;
+  border: 0 solid #ccc;
+  box-sizing: border-box;
+  user-select: none;
+  border-radius: 0px;
+  background-color: #89929b;
+}
+
+.tabs-Css3>li>.content-Css3,
+.tabs-Css3>li>input[type=radio] {
+  white-space: normal;
+  display: none;
+  background-color: #FFF;
+  position: absolute;
+  top: 3em;
+  right: 0;
+  padding: 1em;
+}
+
+.tabs-Css3>li:first-child label {
+  margin-right: 0;
+}
+.tabs-Css3>li:nth-child(2) label {
+  margin-right: 0%;
+}
+.tabs-Css3>li:nth-child(3) label {
+  margin-right: 0%;
+}
+.tabs-Css3>li:nth-child(4) label {
+  margin-right: 0%;
+}
+
+.tabs-Css3 [type=radio]:checked~label {
+  background: #167ab6;
+  color: #fff;
+}
+
+.tabs-Css3 [type=radio]:checked~.content-Css3 {
+  display: block;
+  clear: both;
+}

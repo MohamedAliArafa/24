@@ -113,3 +113,126 @@
 #tab4:checked ~ #tab-content4 {
     display: block;
 }
+
+
+/*RightMenuTaps*/
+.RightMenuTaps {
+    width: 100%;
+    height: 100%;
+    float: none;
+    list-style: none;
+    padding: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.RightMenuTaps-Wrapper-Fixed{
+    position: fixed;
+    top: 2.3em;
+    right: 0;
+    width: 100%;
+}
+
+.RightMenuTaps:after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+.RightMenuTaps input[type=radio] {
+    display:none;
+}
+
+.RightMenuTaps label {
+    display: block;
+    float: left;
+    width: 33.3%;
+    padding: .4em 0;
+    margin: 0;
+    white-space: nowrap;
+
+    color: #FFF;
+    font-size: 1.1em;
+    font-weight: normal;
+    text-decoration: none;
+    text-align: center;
+
+    background-color: #8a939c;
+
+
+    cursor: pointer;
+
+    -webkit-transition: all 0.5s; /* Safari 3.1 to 6.0 */
+    transition: all 0.5s;
+}
+ 
+.RightMenuTaps label span {
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+    width: 2.3em;
+    height: 2.3em;
+}
+.RightMenuTaps label .NewsLink
+{
+    background-image: url( ../Images/Icon/news.png);
+    background-position: center;
+    background-size: 100%;
+    background-repeat: repeat-x;
+}
+.RightMenuTaps label .VideoLink
+{
+    background-image: url( ../Images/Icon/video.png);
+    background-position: center;
+    background-size: 97%;
+    background-repeat: no-repeat;
+}
+.RightMenuTaps label .AboutLink
+{
+    background-image: url( ../Images/Icon/info.png);
+    background-position: center;
+    background-size: 97%;
+    background-repeat: no-repeat;
+}
+
+.RightMenuTaps label i {
+    /*padding: 5px;
+    margin-right: 0;*/
+}
+
+.RightMenuTaps label:hover {
+    background-color: #bababa;
+}
+
+.RightMenuTaps-content {
+    display: none;
+    width: 100%;
+    height: 100%;
+    padding: 1em;
+    box-sizing: border-box;
+ 
+    background-color:#ffffff;
+    position: absolute;
+    top: 3.5em;
+    right: 0;
+}
+
+.RightMenuTaps-content * {
+
+    -webkit-animation: scale 0.7s ease-in-out;
+    -moz-animation: scale 0.7s ease-in-out;
+    animation: scale 0.7s ease-in-out;
+}
+
+.RightMenuTaps [id^="RightMenuTaps-tab"]:checked + label {
+    background-color: #bababa;
+    color: #FFF;
+}
+
+#RightMenuTaps-tab1:checked ~ #RightMenuTaps-content1,
+#RightMenuTaps-tab2:checked ~ #RightMenuTaps-content2,
+#RightMenuTaps-tab3:checked ~ #RightMenuTaps-content3,
+#RightMenuTaps-tab4:checked ~ #RightMenuTaps-content4 {
+    display: block;
+}
