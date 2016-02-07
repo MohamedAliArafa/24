@@ -1,0 +1,36 @@
+<div id="tab-content1" class="tab-content" ng-controller="recentPageController">
+
+<ion-view view-title="Main">
+                                <ion-content class="padding">
+                                    <ion-list>
+                                        <a ng-click="goToCategory('Recent')">
+                                            <h1 class="item bg-Varitiess">
+                                                &#x639;&#x627;&#x62C;&#x644;
+                                                <span class="ArrowMore Left"></span>
+                                            </h1>
+                                        </a>
+                                        <ion-item ng-repeat="article in model.RecentArticles" class="No-Item" ng-click="sendData({{article.ArticleId}})">
+                                            <div class="MainNewsImgWrapper">
+                                                <img src="{{article.BigImageUrl}}" class="img_small">
+                                                <div class="TitleWrapper">
+                                                    <div class="TitleWrapper-Title">
+                                                        {{ article.Title}}
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="item item-divider item item-text-wrap txt-Source">
+                                                <i>{{article.Excerpt}}</i>
+                                            </div>
+                                            <!--<div class="item item-text-wrap No-Item txt-Description">
+                                                {{ article.Title}}
+                                            </div>-->
+                                            <div class="item item-divider item item-text-wrap txt-Source">
+                                                <i>&#x627;&#x644;&#x645;&#x635;&#x62F;&#x631;:{{ article.TheSource}}</i> <!-- <a href="#"><span class="Shre-Icon Left"></span></a>-->
+                                            </div>
+                                            <div class="Block-Margin-Bottom1 Clear"></div>
+                                        </ion-item>
+
+                                    </ion-list>
+                                </ion-content>
+                            </ion-view>
+</div>

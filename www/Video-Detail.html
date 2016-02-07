@@ -1,0 +1,120 @@
+﻿<!DOCTYPE html>
+<html dir="rtl">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+        <link href="lib/ionic/css/ionic.min.css" rel="stylesheet">
+        <link href="Design/MyCss.css" rel="stylesheet">
+        <script src="lib/ionic/js/ionic.bundle.js"></script>
+        <script src="js/app.js"></script>
+        <script src="js/controller.js"></script>
+        <script src="js/services.js"></script>
+        <script src="js/ng-cordova.min.js"></script>
+        <script src="cordova.js"></script>
+        <link href="Design/FontAr/Font.css" rel="stylesheet" />
+        <link href="Design/Taps/MyCss2.css" rel="stylesheet" />
+        <link href="Design/Css3.css" rel="stylesheet" />
+    </head>
+    <body ng-app="app">
+    <ion-pane ng-controller="videoDetailController">
+
+        <ion-side-menus>
+            <ion-side-menu-content>
+                <ion-header-bar class="topContainer" id="TopBar">
+                    <ul class="Top-Header-List">
+                        <li><a href="homePage.html"> <span class="Home-Icon"><i class="icon ion-android-arrow-back"></i></span></a></li>
+                        <li><a><img src="Design/Images/Icon/logo.png"></a></li>
+                        <li>
+                            <button class="MenuButton" ng-click="toggleLeft()"><i class="icon ion-android-menu"></i></button>
+                            <a href="homePage.html"> <span class="Home-Icon"><i class="icon ion-android-home"></i></span></a>
+                        </li>
+                    </ul>
+                    <div class="Clear"></div>
+                </ion-header-bar>
+                <ion-content style="overflow: hidden">
+                    <!--<div style="height: 6.3em"></div>-->
+                    <div class="Clear"></div>
+                    <ion-view view-title="Main">
+                        <ion-content class="padding">
+
+
+                            <ion-list>
+                                <h1 class="item bg-Arabic animated bounceInDown"> {{ model.VideoDetail.Channels}}  </h1>
+                                <ion-item class="No-Item animated bounceInRight ">
+
+                                    <div class="Title-Two">
+                                        {{ model.VideoDetail.Title}}
+                                    </div>
+
+                                    
+                                    <iframe width="100%" height="325"
+                                            src="{{trustSrc(model.VideoDetail.YoutubeLink)}}" frameborder="0" allowfullscreen>
+                                        
+                                    </iframe>
+
+
+                                    <div class="Block-Margin-Bottom1 Clear"></div>
+
+                                    <!--                                    <div class="item item-divider item item-text-wrap txt-Source" style="height:3.5em;">
+                                                                            <i>المصدر:{{ model.VideoDetail.Source}}</i>
+                                                                            <a href="#" ng-click="share(model.Article.Title,model.Article.Details,model.Article.LinkUrl)"><span class="Shre-Icon Left"></span></a>
+                                                                        </div>-->
+
+                                    <div class="Block-Margin-Bottom1 Clear"></div>
+                                    <!--                                    <div class="item item-text-wrap No-Item txt-Description">
+                                                                           
+                                                                        </div>-->
+                                    <div class="Block-Margin-Bottom1 Clear"></div>
+                                    <p class="Normal-Paragrah" ng-bind-html="model.VideoDetail.Caption | unsafe"></p>
+                                    <div class="Block-Margin-Bottom1 Clear"></div>
+                                </ion-item>
+                            </ion-list>
+                            <div class="Block-Margin-Bottom1 Clear"></div>
+
+                            <ion-list>
+                                <h3 class="Title-Two No-Item">موضوعات ذات صله</h3>
+
+                                <!--                                <ion-item ng-repeat="article2 in model.RelatedArticles"  class="No-Item"  ng-click="sendData({{article2.ArticleId}})"  >
+                                                                    <div class="item">
+                                
+                                                                        <a href="#">{{article2.Title}}</a>
+                                                                    </div>
+                                
+                                
+                                                                </ion-item>-->
+
+                            </ion-list>
+
+                            <div class="Block-Margin-Bottom1 Clear"></div>
+
+                        </ion-content>
+                    </ion-view>
+
+
+
+
+
+
+
+
+
+                </ion-content>
+
+
+            </ion-side-menu-content>
+
+
+            <ion-side-menu side="right">
+                <div class="RightMenuTaps" ng-include="'Menu.html'"></div>
+            </ion-side-menu>
+
+        </ion-side-menus>  
+
+
+
+
+
+    </ion-pane>
+
+</body>
+</html>

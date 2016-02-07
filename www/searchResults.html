@@ -1,0 +1,72 @@
+﻿<!DOCTYPE html>
+<html dir="rtl">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+        <link href="lib/ionic/css/ionic.min.css" rel="stylesheet">
+        <link href="Design/MyCss.css" rel="stylesheet">
+        <script src="lib/ionic/js/ionic.bundle.js"></script>
+        <script src="js/app.js"></script>
+        <script src="js/controller.js"></script>
+        <script src="js/services.js"></script>
+        <link href="Design/FontAr/Font.css" rel="stylesheet" />
+        <link href="Design/Taps/MyCss2.css" rel="stylesheet" />
+    </head>
+    <body ng-app="app">
+    <ion-pane ng-controller="searchDetailsController">
+        <ion-side-menus>
+            <ion-side-menu-content>
+                <ion-header-bar class="topContainer" id="TopBar">
+                    <ul class="Top-Header-List">
+                        <li><a href="homePage.html"> <span class="Home-Icon"><i class="icon ion-android-arrow-back"></i></span></a></li>
+                        <li><a href="homePage.html"><img src="Design/Images/Icon/logo.png"></a></li>
+                        <li>
+                            <button class="MenuButton" ng-click="toggleLeft()"><i class="icon ion-android-menu"></i></button>
+                            <a href="homePage.html"> <span class="Home-Icon"><i class="icon ion-android-home"></i></span></a>
+                        </li>
+                    </ul>
+                    <div class="Clear"></div>
+                </ion-header-bar>
+                <ion-content style="overflow: hidden">
+                    <!--<div style="height: 6.3em"></div>-->
+                    <div class="Clear"></div>
+                    <ion-view view-title="Main">
+                        <ion-content class="padding">
+                            <ion-list>
+                                <a href="#">
+                                    <h1 class="item bg-Arabic">
+                                        {{model.Title}}
+                                        <span class="ArrowMore Left"></span>
+                                    </h1>
+                                </a>
+                                <ion-item ng-repeat="article in model.SearchedArticles" class="No-Item" ng-click="sendData({{article.ArticleId}})">
+                                    <div class="row">
+                                         <div class="MainNewsImgWrapper">
+                                        <img src="{{article.BigImageUrl}}" class="img_small">
+                                        <div class="TitleWrapper">
+                                            <div class="TitleWrapper-Title">
+                                                {{ article.Title}}
+                                            </div>
+                                        </div>
+                                    </div>
+                                    </div>
+                                    <div class="item item-divider item item-text-wrap txt-Source">
+                                        <i>&#x627;&#x644;&#x645;&#x635;&#x62F;&#x631;:{{article.Source}}</i>
+                                        <!-- <a href="#"><span class="Shre-Icon Left"></span></a> -->
+                                    </div>
+                                    <div class="Block-Margin-Bottom1 Clear"></div>
+                                </ion-item>
+                            </ion-list>
+                            <div class="Block-Margin-Bottom1 Clear"></div>
+                            <div class="Block-Margin-Bottom1 Clear"></div>
+                        </ion-content>
+                    </ion-view>
+                </ion-content>
+            </ion-side-menu-content>
+            <ion-side-menu side="right">
+                <div class="RightMenuTaps" ng-include="'Menu.html'"></div>
+            </ion-side-menu>
+        </ion-side-menus>  
+    </ion-pane>
+</body>
+</html>

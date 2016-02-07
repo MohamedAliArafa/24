@@ -1,0 +1,72 @@
+<div class="RightMenuTaps" >
+                    <input type="radio" name="tabs2" id="RightMenuTaps-tab1">
+                    <label for="RightMenuTaps-tab1">
+                        <span class="NewsLink"></span>
+                    </label>
+
+                    <input type="radio" name="tabs2" id="RightMenuTaps-tab2">
+                    <label for="RightMenuTaps-tab2">
+                        <span class="VideoLink"></span>
+                    </label>
+                    <input type="radio" name="tabs2" id="RightMenuTaps-tab3" checked>
+                    <label for="RightMenuTaps-tab3">
+                        <span class="AboutLink"></span>
+                    </label>
+                    <div id="RightMenuTaps-content1" class="RightMenuTaps-content">
+                        <div class="MainMenu">
+                            <ul ng-controller='categoryController'>
+                                <li><a ng-click="goToCategory('Arabic')" class="Arabic">عربي</a></li>
+                                <li><a ng-click="goToCategory('International')" class="International">دولي</a></li>
+                                <li><a ng-click="goToCategory('UAE')" class="UAE">الإمارات</a></li>
+                                <li><a ng-click="goToCategory('Directions')" class="Directions">إتجاهات</a></li>
+                                <li><a ng-click="goToCategory('Technology')" class="Technology">تكنولوجيا</a></li>
+                                <li><a ng-click="goToCategory('Health')" class="Health">صحة</a></li>
+                                <li><a ng-click="goToCategory('Sport')" class="Sport">ملاعب</a></li>
+                                <li><a ng-click="goToCategory('LifeStyle')" class="LifeStyle">لايف ستايل</a></li>
+                                <li><a ng-click="goToCategory('Varitiess')" class="Varitiess">منوعات</a></li>
+                                <li><a ng-click="goToCategory('Business')" class="Bsiness">مال وأعمال</a></li>
+                                <li><a ng-click="goToCategory('Youth')" class="Youth">شباب</a></li>
+                                <li><a ng-click="goToCategory('Pictures')" class="Pictures">الصور</a></li>
+                            </ul>
+                        </div>
+                    </div> <!-- #tab-content1 -->
+                    <div id="RightMenuTaps-content2" class="RightMenuTaps-content">
+                        <div class="MainMenu">
+                            <ul ng-controller="videoCategoryController">
+                                <li><h2 href="#">قنوات 24</h2></li>
+                                <li><a ng-click="goToCategory('VideoNews')" class="News">الإخبارية</a></li>
+                                <li><a ng-click="goToCategory('VideoUAE')" class="UAE2">الإماراتية</a></li>
+                                <li><a ng-click="goToCategory('VideoDocumentry')" class="Documentary">الوثائقية</a></li>
+                                <li><a ng-click="goToCategory('VideoVarities')" class="Varitiess2">منوعات</a></li>
+                                <li><a ng-click="goToCategory('VideoSport')" class="Sport2">ملاعب</a></li>
+                                <li><h2 href="#">قوائم التشغيل</h2></li>
+                                <li><h2 href="#">قنوات 24</h2></li>
+                                <li><h2 href="#">أحدث الأفلام</h2></li>
+                            </ul>
+                        </div>
+                    </div> <!-- #tab-content2 -->
+                    <div id="RightMenuTaps-content3" class="RightMenuTaps-content">
+
+                        <div class="MainMenu">
+                            <ul>
+                                <li><a href="About.html">من نحن</a></li>
+                                <li><a href="our-team.html">فريق العمل</a></li>
+                                <li><a href="privacy-policy.html">سياسة الخصوصية</a></li>
+                                <li><a href="terms-and-conditions.html">الشروط والأحكام</a></li>
+                                <li> <a>تواصل معنا علي</a></li>
+                            </ul>
+                            <ul class="Soical-Icons" ng-controller='sideMenuController'>
+                                        <li><a href="#"><img src="Design/Images/Social/whatsapp.jpg" /></a></li>
+                                        <li><a href="#"><img src="Design/Images/Social/instagram.jpg" /></a></li>
+                                        <li><a href="#"><img src="Design/Images/Social/Twitter.jpg" /></a></li>
+                                        <li><a href="#"><img src="Design/Images/Social/Facebook.jpg" /></a></li>
+                                        <li><a href="#"><img src="Design/Images/Social/Telegram.jpg" /></a></li>
+                                        <li><a href="#"><img src="Design/Images/Social/Google.jpg" /></a></li>
+                                        <li><a href="#"><img src="Design/Images/Social/youtube.jpg" /></a></li>
+                                        <li><a class="button button-clear button-large" href="whatsapp://send?text=Hello%20World!">
+                                        <img src="Design/Images/Social/whatsapp.jpg" />
+                                        </a></li>
+                            </ul>
+                        </div>
+                    </div> <!-- #tab-content3 -->
+                </div>

@@ -7,14 +7,17 @@
         <link href="Design/MyCss.css" rel="stylesheet">
         <script src="lib/ionic/js/ionic.bundle.js"></script>
         <script src="js/app.js"></script>
+        <script src="js/controller.js"></script>
+        <script src="js/services.js"></script>
         <link href="Design/FontAr/Font.css" rel="stylesheet" />
         <link href="Design/Taps/MyCss2.css" rel="stylesheet" />
         <link href="Design/Css3.css" rel="stylesheet" />
         <script type="text/javascript">
-function MM_jumpMenu(targ,selObj,restore){ //v3.0
-  eval(targ+".location='"+selObj.options[selObj.selectedIndex].value+"'");
-  if (restore) selObj.selectedIndex=0;
-}
+            function MM_jumpMenu(targ, selObj, restore) { //v3.0
+                eval(targ + ".location='" + selObj.options[selObj.selectedIndex].value + "'");
+                if (restore)
+                    selObj.selectedIndex = 0;
+            }
         </script>
     </head>
     <body ng-app="app">
@@ -22,164 +25,65 @@ function MM_jumpMenu(targ,selObj,restore){ //v3.0
 
         <ion-side-menus>
             <ion-side-menu-content>
-                
-                
+
+
                 <ion-header-bar class="topContainer" id="TopBar">
                     <ul class="Top-Header-List">
-                        <li><a href="index2.html"> <span class="Home-Icon"><i class="icon ion-android-arrow-back"></i></span></a></li>
-                        <li><a href="index2.html"><img src="Design/Images/Icon/logo.png"></a></li>
+                        <li><a href="homePage.html"> <span class="Home-Icon"><i class="icon ion-android-arrow-back"></i></span></a></li>
+                        <li><a><img src="Design/Images/Icon/logo.png"></a></li>
                         <li>
                             <button class="MenuButton" ng-click="toggleLeft()"><i class="icon ion-android-menu"></i></button>
-                            <a href="index2.html"> <span class="Home-Icon"><i class="icon ion-android-home"></i></span></a>
+                            <a href="homePage.html"> <span class="Home-Icon"><i class="icon ion-android-home"></i></span></a>
                         </li>
                     </ul>
                     <div class="Clear"></div>
                 </ion-header-bar>
-                
-     
-
-
-
-<ion-content style="overflow: hidden">
-    
-        <!--<div style="height: 6.3em"></div>-->
-    
-
-    <div class="Clear"></div>
-    
-    
-    <ion-view view-title="Main">
-        <ion-content class="padding">
-            <ion-list>
-                <h3 class="item bg-Arabic animated bounceInDown">بحث في الأخبار</h3>
-                <ion-item class="No-Item animated bounceInRight">
-                  <div class="Normal-Paragrah" style="padding:1em;"></div>
-
-                   <div class="Normal-Paragrah" style="padding:.8em .4em;">
-                    <input name="Keyword" type="text" dir="rtl" style="width:100%; border-radius:.5em; border:1px #CCC solid; padding:1.5em;"placeholder="كلمة البحث">
-                  </div>
-					<div class="Normal-Paragrah" style="padding:.8em .4em;">
-                    <input name="Calendar" type="text" dir="rtl" style="width:100%; border-radius:.5em; border:1px #CCC solid; padding:1.5em;" placeholder="تاريخ الخبر">
-                    </div>
-					<div class="Normal-Paragrah" style="padding:.8em .4em;">
-                      <select name="jumpMenu" id="jumpMenu" onChange="MM_jumpMenu('parent',this,0)" style="width:100%; border-radius:.5em; border:1px #CCC solid; padding:.8em; color:#333;">
-                        <option>عربي</option>
-                        <option>دولي</option>
-                        <option>لايف ستايل</option>
-                        <option>الرياضة</option>
-                        <option>منوعات</option>
-                      </select>
-                  </div>
-				  <div class="Normal-Paragrah" style="padding:.8em .4em;">
-                  <input name="بحث" value="بحث" type="button" style="width:100%; border-radius:.5em; background-color:#167ab6; color:#fff; padding:1.2em; border:none;">
-                    </div>
-                   
-              </ion-item>
-            </ion-list>
-            <div class="Block-Margin-Bottom1 Clear"></div>
-
-        </ion-content>
-    </ion-view>
-
-      </ion-content>
-
-
-       </ion-side-menu-content>
-
-
+                <ion-content style="overflow: hidden" ng-controller="searchController">
+                    <!--<div style="height: 6.3em"></div>-->
+                    <div class="Clear"></div>
+                    <ion-view view-title="Main">
+                        <ion-content class="padding">
+                            <ion-list>
+                                <h3 class="item bg-Arabic animated bounceInDown">بحث في الأخبار</h3>
+                                <ion-item class="No-Item animated bounceInRight">
+                                    <div class="Normal-Paragrah" style="padding:1em;"></div>
+                                    <div class="Normal-Paragrah" style="padding:.8em .4em;">
+                                        <input name="Keyword" type="text" dir="rtl" style="width:100%; border-radius:.5em; border:1px #CCC solid; padding:1.5em;" placeholder="كلمة البحث" ng-model="model.title">
+                                    </div>
+                                    <div class="Normal-Paragrah" style="padding:.8em .4em;">
+                                        <input name="Calendar" type="text" dir="rtl" style="width:100%; border-radius:.5em; border:1px #CCC solid; padding:1.5em;" placeholder="تاريخ الخبر" ng-model="model.date">
+                                    </div>
+                                    <div class="Normal-Paragrah" style="padding:.8em .4em;">
+                                        <select style="width:100%; border-radius:.5em; border:1px #CCC solid; padding:.8em; color:#333;" ng-model="model.sectionId">
+                                            <option value='31' >عربي</option>
+                                            <option value='32' >دولي</option>
+                                            <option value='55' >لايف ستايل</option>
+                                            <option value='47' >الرياضة</option>
+                                            <option value='130' >منوعات</option>
+                                            <option value='88' >الإمارات</option>
+                                            <option value='39' >إتجاهات</option>
+                                            <option value='208' >تكنولوجيا</option>
+                                            <option value='61' >صحة</option>
+                                            <option value='73' >ثقافة</option>
+                                            <option value='86' >شباب</option>
+                                            <option value='127' >مال و أعمال</option>
+                                        </select>
+                                    </div>
+                                    <div class="Normal-Paragrah" style="padding:.8em .4em;">
+                                        <input name="بحث" value="بحث" type="button" style="width:100%; border-radius:.5em; background-color:#167ab6; color:#fff; padding:1.2em; border:none;" ng-click="search()">
+                                    </div>
+                                </ion-item>
+                            </ion-list>
+                            <div class="Block-Margin-Bottom1 Clear"></div>
+                        </ion-content>
+                    </ion-view>
+                </ion-content>
+            </ion-side-menu-content>
             <ion-side-menu side="right">
-                <div class="RightMenuTaps">
-
-
-                    <input type="radio" name="tabs" id="RightMenuTaps-tab1">
-                    <label for="RightMenuTaps-tab1">
-                        <span class="NewsLink"></span>
-                    </label>
-
-                    <input type="radio" name="tabs" id="RightMenuTaps-tab2">
-                    <label for="RightMenuTaps-tab2">
-                        <span class="VideoLink"></span>
-                    </label>
-
-                    <input type="radio" name="tabs" id="RightMenuTaps-tab3" checked>
-                    <label for="RightMenuTaps-tab3">
-                        <span class="AboutLink"></span>
-                    </label>
-
-                    <div id="RightMenuTaps-content1" class="RightMenuTaps-content">
-                        <div class="MainMenu">  <ul>
-                                <li><a href="Arabic.html" class="Arabic">عربي</a></li>
-                                <li><a href="International.html" class="International">دولي</a></li>
-                                <li><a href="UAE.html" class="UAE">الإمارات</a></li>
-                                <li><a href="Directions.html" class="Directions">إتجاهات</a></li>
-                                <li><a href="Technology.html" class="Technology">تكنولوجيا</a></li>
-                                <li><a href="Health.html" class="Health">صحة</a></li>
-                                <li><a href="Sports.html" class="Sport">ملاعب</a></li>
-                                <li><a href="LifeStyle.html" class="LifeStyle">لايف ستايل</a></li>
-                                <li><a href="Varities.html" class="Varitiess">منوعات</a></li>
-                                <li><a href="Business.html" class="Bsiness">مال وأعمال</a></li>
-                                <li><a href="Youth.html" class="Youth">شباب</a></li>
-                                <li><a href="Pictures.html" class="Pictures">الصور</a></li>
-                            </ul>
-
-                        </div>
-
-                    </div> <!-- #tab-content1 -->
-
-                    <div id="RightMenuTaps-content2" class="RightMenuTaps-content">
-
-                        <div class="MainMenu">
-                            <ul>
-                                <li><h2 href="#">قنوات 24</h2></li>
-                                <li><a href="#" class="News">الإخبارية</a></li>
-                                <li><a href="#" class="UAE2">الإماراتية</a></li>
-                                <li><a href="#" class="Documentary">الوثائقية</a></li>
-                                <li><a href="#" class="Varitiess2">منوعات</a></li>
-                                <li><a href="#" class="Sport2">ملاعب</a></li>
-                                <li><h2 href="#">قوائم التشغيل</h2></li>
-                                <li><h2 href="#">قنوات 24</h2></li>
-                                <li><h2 href="#">أحدث الأفلام</h2></li>
-                            </ul>
-
-                        </div>
-
-                    </div> <!-- #tab-content2 -->
-
-                    <div id="RightMenuTaps-content3" class="RightMenuTaps-content">
-
-                        <div class="MainMenu">
-                        <ul>
-                                <li><a href="About.html">من نحن</a></li>
-                                <li><a href="our-team.html">فريق العمل</a></li>
-                                <li><a href="privacy-policy.html">سياسة الخصوصية</a></li>
-                                <li><a href="terms-and-conditions.html">الشروط والأحكام</a></li>
-                                <li> <a>تواصل معنا علي</a></li>
-                            </ul>
-                            <ul class="Soical-Icons">
-                                        <li><a href="#"><img src="Design/Images/Social/whatsapp.jpg" /></a></li>
-                                        <li><a href="#"><img src="Design/Images/Social/instagram.jpg" /></a></li>
-                                        <li><a href="#"><img src="Design/Images/Social/Twitter.jpg" /></a></li>
-                                        <li><a href="#"><img src="Design/Images/Social/Facebook.jpg" /></a></li>
-                                        <li><a href="#"><img src="Design/Images/Social/Telegram.jpg" /></a></li>
-                                        <li><a href="#"><img src="Design/Images/Social/Google.jpg" /></a></li>
-                                        <li><a href="https://www.youtube.com/user/20fourMedia" target="_blank"><img src="Design/Images/Social/youtube.jpg" /></a></li>
-                                    </ul>
-	
-
-                        </div>
-
-                    </div> <!-- #tab-content3 -->
-
-                </div>
+                <div class="RightMenuTaps" ng-include="'Menu.html'"></div>
             </ion-side-menu>
-          
         </ion-side-menus>  
-        
-        
-         
-        
-
     </ion-pane>
-    
+
 </body>
 </html>
